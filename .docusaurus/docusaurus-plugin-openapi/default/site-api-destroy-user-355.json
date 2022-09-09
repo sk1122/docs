@@ -1,0 +1,98 @@
+{
+  "type": "api",
+  "id": "destroy-user",
+  "unversionedId": "destroy-user",
+  "title": "destroyUser",
+  "description": "",
+  "slug": "/destroy-user",
+  "frontMatter": {},
+  "api": {
+    "operationId": "destroyUser",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "users"
+    ],
+    "method": "delete",
+    "path": "/users/{id}/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "destroy User",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "users",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "DELETE"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/destroy-user",
+  "previous": {
+    "title": "partialUpdateUser",
+    "permalink": "/api/partial-update-user"
+  },
+  "next": {
+    "title": "listProviders",
+    "permalink": "/api/list-providers"
+  }
+}

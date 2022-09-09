@@ -1,0 +1,297 @@
+{
+  "type": "api",
+  "id": "create-requests-view-set",
+  "unversionedId": "create-requests-view-set",
+  "title": "createRequestsViewSet",
+  "description": "",
+  "slug": "/create-requests-view-set",
+  "frontMatter": {},
+  "api": {
+    "operationId": "createRequestsViewSet",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {}
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {}
+        },
+        "multipart/form-data": {
+          "schema": {}
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "content": {
+          "application/json": {
+            "schema": {}
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "post",
+    "path": "/requests/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "create Requests View Set",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "POST",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "0",
+            "value": "s"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "1",
+            "value": "c"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "2",
+            "value": "h"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "3",
+            "value": "e"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "4",
+            "value": "m"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "5",
+            "value": "a"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "6",
+            "value": " "
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "7",
+            "value": "t"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "8",
+            "value": "y"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "9",
+            "value": "p"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "10",
+            "value": "e"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "11",
+            "value": " "
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "12",
+            "value": "n"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "13",
+            "value": "o"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "14",
+            "value": "t"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "15",
+            "value": " "
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "16",
+            "value": "p"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "17",
+            "value": "r"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "18",
+            "value": "o"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "19",
+            "value": "v"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "20",
+            "value": "i"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "21",
+            "value": "d"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "22",
+            "value": "e"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "23",
+            "value": "d"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/create-requests-view-set",
+  "previous": {
+    "title": "listRequestsViewSets",
+    "permalink": "/api/list-requests-view-sets"
+  },
+  "next": {
+    "title": "myRequestsRequestsViewSet",
+    "permalink": "/api/my-requests-requests-view-set"
+  }
+}

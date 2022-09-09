@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/sdk/installation",
+  "id": "fetcch-x/sdk/installation",
+  "title": "Installation",
+  "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+  "source": "@site/docs/fetcch-x/sdk/installation.md",
+  "sourceDirName": "fetcch-x/sdk",
+  "slug": "/fetcch-x/sdk/installation",
+  "permalink": "/docs/fetcch-x/sdk/installation",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SDK",
+    "permalink": "/docs/category/sdk-1"
+  },
+  "next": {
+    "title": "Get ID Data",
+    "permalink": "/docs/fetcch-x/sdk/get-id"
+  }
+}

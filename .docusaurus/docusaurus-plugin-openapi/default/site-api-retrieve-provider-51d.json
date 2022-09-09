@@ -1,0 +1,123 @@
+{
+  "type": "api",
+  "id": "retrieve-provider",
+  "unversionedId": "retrieve-provider",
+  "title": "retrieveProvider",
+  "description": "",
+  "slug": "/retrieve-provider",
+  "frontMatter": {},
+  "api": {
+    "operationId": "retrieveProvider",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "api_key": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "owner": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "owner"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "providers"
+    ],
+    "method": "get",
+    "path": "/providers/{id}/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "retrieve Provider",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "providers",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/retrieve-provider",
+  "previous": {
+    "title": "createProvider",
+    "permalink": "/api/create-provider"
+  },
+  "next": {
+    "title": "updateProvider",
+    "permalink": "/api/update-provider"
+  }
+}

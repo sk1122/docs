@@ -1,0 +1,226 @@
+{
+  "type": "api",
+  "id": "partial-update-provider",
+  "unversionedId": "partial-update-provider",
+  "title": "partialUpdateProvider",
+  "description": "",
+  "slug": "/partial-update-provider",
+  "frontMatter": {},
+  "api": {
+    "operationId": "partialUpdateProvider",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "api_key": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "owner"
+            ]
+          }
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "api_key": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "owner"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "api_key": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "owner"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "api_key": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "owner": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "owner"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "providers"
+    ],
+    "method": "patch",
+    "path": "/providers/{id}/",
+    "jsonRequestBodyExample": {
+      "id": "string",
+      "api_key": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "owner": "string"
+    },
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "partial Update Provider",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "providers",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "PATCH",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "id",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "owner",
+            "value": "<string>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/partial-update-provider",
+  "previous": {
+    "title": "updateProvider",
+    "permalink": "/api/update-provider"
+  },
+  "next": {
+    "title": "destroyProvider",
+    "permalink": "/api/destroy-provider"
+  }
+}

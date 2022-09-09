@@ -1,0 +1,184 @@
+{
+  "type": "api",
+  "id": "list-users",
+  "unversionedId": "list-users",
+  "title": "listUsers",
+  "description": "",
+  "slug": "/list-users",
+  "frontMatter": {},
+  "api": {
+    "operationId": "listUsers",
+    "description": "",
+    "parameters": [
+      {
+        "name": "page",
+        "required": false,
+        "in": "query",
+        "description": "A page number within the paginated result set.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "example": 123
+                },
+                "next": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=4"
+                },
+                "previous": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=2"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "readOnly": true
+                      },
+                      "first_name": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 120
+                      },
+                      "last_name": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 120
+                      },
+                      "wagpay_id": {
+                        "type": "string",
+                        "nullable": true
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email",
+                        "maxLength": 254
+                      },
+                      "password": {
+                        "type": "string",
+                        "writeOnly": true
+                      },
+                      "profile_picture": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 240
+                      },
+                      "birth_date": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true
+                      },
+                      "is_onboarded": {
+                        "type": "boolean"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date",
+                        "readOnly": true
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date",
+                        "readOnly": true
+                      }
+                    },
+                    "required": [
+                      "email",
+                      "password"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "users"
+    ],
+    "method": "get",
+    "path": "/users/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "list Users",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "users",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "A page number within the paginated result set.",
+              "type": "text/plain"
+            },
+            "key": "page",
+            "value": "<integer>"
+          }
+        ],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/list-users",
+  "previous": {
+    "title": "Get Payment Requests sent by a user",
+    "permalink": "/api/get-payment-requests-sent-by-a-user"
+  },
+  "next": {
+    "title": "createUser",
+    "permalink": "/api/create-user"
+  }
+}

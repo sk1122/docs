@@ -1,0 +1,116 @@
+{
+  "type": "api",
+  "id": "destroy-fetcch-x-id",
+  "unversionedId": "destroy-fetcch-x-id",
+  "title": "Destroy FetcchX ID",
+  "description": "",
+  "slug": "/destroy-fetcch-x-id",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Destroy FetcchX ID",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "signed_msg",
+        "required": true,
+        "in": "query",
+        "description": "A Valid ECDSA Signature",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "FetcchX ID"
+    ],
+    "method": "delete",
+    "path": "/id/{id}/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "Destroy Fetcch X ID",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "(Required) A Valid ECDSA Signature",
+              "type": "text/plain"
+            },
+            "key": "signed_msg",
+            "value": "<string>"
+          }
+        ],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "DELETE"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/destroy-fetcch-x-id",
+  "previous": {
+    "title": "Partial Update FetcchX ID",
+    "permalink": "/api/partial-update-fetcch-x-id"
+  },
+  "next": {
+    "title": "Get Payment Requests",
+    "permalink": "/api/get-payment-requests"
+  }
+}

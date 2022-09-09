@@ -1,0 +1,168 @@
+{
+  "type": "api",
+  "id": "create-token-obtain-pair",
+  "unversionedId": "create-token-obtain-pair",
+  "title": "createTokenObtainPair",
+  "description": "",
+  "slug": "/create-token-obtain-pair",
+  "frontMatter": {},
+  "api": {
+    "operationId": "createTokenObtainPair",
+    "description": "Takes a set of user credentials and returns an access and refresh JSON web\ntoken pair to prove the authentication of those credentials.",
+    "parameters": [],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string",
+                  "writeOnly": true
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "v1"
+    ],
+    "method": "post",
+    "path": "/v1/token/",
+    "jsonRequestBodyExample": {
+      "email": "string",
+      "password": "string"
+    },
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "create Token Obtain Pair",
+      "description": {
+        "content": "Takes a set of user credentials and returns an access and refresh JSON web\ntoken pair to prove the authentication of those credentials.",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "v1",
+          "token",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "POST",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "email",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "password",
+            "value": "<string>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/create-token-obtain-pair",
+  "previous": {
+    "title": "destroyProvider",
+    "permalink": "/api/destroy-provider"
+  },
+  "next": {
+    "title": "createTokenRefresh",
+    "permalink": "/api/create-token-refresh"
+  }
+}

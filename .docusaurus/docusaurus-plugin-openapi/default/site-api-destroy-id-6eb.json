@@ -1,0 +1,79 @@
+{
+  "type": "api",
+  "id": "destroy-id",
+  "unversionedId": "destroy-id",
+  "title": "destroyID",
+  "description": "",
+  "slug": "/destroy-id",
+  "frontMatter": {},
+  "api": {
+    "operationId": "destroyID",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "id"
+    ],
+    "method": "delete",
+    "path": "/id/{id}/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "destroy ID",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "method": "DELETE"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/destroy-id",
+  "previous": {
+    "title": "Partial Update FetcchX ID",
+    "permalink": "/api/partial-update-fetcch-x-id"
+  },
+  "next": {
+    "title": "getTokenBalancesID",
+    "permalink": "/api/get-token-balances-id"
+  }
+}

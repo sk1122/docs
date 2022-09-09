@@ -1,0 +1,16 @@
+{
+  "title": "API",
+  "description": "Introduction docs to get you started with @wagpay/id",
+  "slug": "/category/api",
+  "permalink": "/docs/category/api",
+  "navigation": {
+    "previous": {
+      "title": "FetcchX ID",
+      "permalink": "/docs/category/fetcchx-id"
+    },
+    "next": {
+      "title": "Get ID Data",
+      "permalink": "/docs/fetcch-x/api/get-id"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "SDK",
+  "description": "Introduction docs to get you started with @fetcch/id",
+  "slug": "/category/sdk",
+  "permalink": "/docs/category/sdk",
+  "navigation": {
+    "previous": {
+      "title": "How it works?",
+      "permalink": "/docs/fetcch-bridge/how-it-works"
+    },
+    "next": {
+      "title": "Installation",
+      "permalink": "/docs/fetcch-bridge/sdk/installation"
+    }
+  }
+}

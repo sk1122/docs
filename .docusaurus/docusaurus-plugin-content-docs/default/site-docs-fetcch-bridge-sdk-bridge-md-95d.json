@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-bridge/sdk/bridge",
+  "id": "fetcch-bridge/sdk/bridge",
+  "title": "bridge()",
+  "description": "Bridge Token X on Chain A to Token Y on Chain B using Fetcch Bridge",
+  "source": "@site/docs/fetcch-bridge/sdk/bridge.md",
+  "sourceDirName": "fetcch-bridge/sdk",
+  "slug": "/fetcch-bridge/sdk/bridge",
+  "permalink": "/docs/fetcch-bridge/sdk/bridge",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-bridge/sdk/bridge.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/fetcch-bridge/sdk/installation"
+  },
+  "next": {
+    "title": "FetcchX ID",
+    "permalink": "/docs/category/fetcchx-id"
+  }
+}

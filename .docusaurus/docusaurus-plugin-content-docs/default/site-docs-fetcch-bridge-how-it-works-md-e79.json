@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-bridge/how-it-works",
+  "id": "fetcch-bridge/how-it-works",
+  "title": "How it works?",
+  "description": "",
+  "source": "@site/docs/fetcch-bridge/how-it-works.md",
+  "sourceDirName": "fetcch-bridge",
+  "slug": "/fetcch-bridge/how-it-works",
+  "permalink": "/docs/fetcch-bridge/how-it-works",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-bridge/how-it-works.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Fetcch Bridge",
+    "permalink": "/docs/category/fetcch-bridge"
+  },
+  "next": {
+    "title": "SDK",
+    "permalink": "/docs/category/sdk"
+  }
+}

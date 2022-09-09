@@ -1,0 +1,16 @@
+{
+  "title": "FetcchX ID",
+  "description": "Introduction docs to get you started with @wagpay/id",
+  "slug": "/category/fetcchx-id",
+  "permalink": "/docs/category/fetcchx-id",
+  "navigation": {
+    "previous": {
+      "title": "bridge()",
+      "permalink": "/docs/fetcch-bridge/sdk/bridge"
+    },
+    "next": {
+      "title": "How it works?",
+      "permalink": "/docs/fetcch-x/how-it-works"
+    }
+  }
+}

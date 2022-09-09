@@ -1,0 +1,16 @@
+{
+  "title": "Open Source",
+  "description": "Fetcch's open source packages that can help you in development",
+  "slug": "/category/open-source",
+  "permalink": "/docs/category/open-source",
+  "navigation": {
+    "previous": {
+      "title": "FetcchX ID API",
+      "permalink": "/docs/fetcch-x/api"
+    },
+    "next": {
+      "title": "Fetcch Chain Data",
+      "permalink": "/docs/open-source/fetcch-chain-data"
+    }
+  }
+}

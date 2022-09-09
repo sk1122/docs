@@ -1,0 +1,418 @@
+{
+  "type": "api",
+  "id": "create-user",
+  "unversionedId": "create-user",
+  "title": "createUser",
+  "description": "",
+  "slug": "/create-user",
+  "frontMatter": {},
+  "api": {
+    "operationId": "createUser",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "first_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "last_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "wagpay_id": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "maxLength": 254
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              },
+              "profile_picture": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 240
+              },
+              "birth_date": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "is_onboarded": {
+                "type": "boolean"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "first_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "last_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "wagpay_id": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "maxLength": 254
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              },
+              "profile_picture": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 240
+              },
+              "birth_date": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "is_onboarded": {
+                "type": "boolean"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "first_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "last_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "wagpay_id": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "maxLength": 254
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              },
+              "profile_picture": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 240
+              },
+              "birth_date": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "is_onboarded": {
+                "type": "boolean"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "first_name": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 120
+                },
+                "last_name": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 120
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email",
+                  "maxLength": 254
+                },
+                "password": {
+                  "type": "string",
+                  "writeOnly": true
+                },
+                "profile_picture": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 240
+                },
+                "birth_date": {
+                  "type": "string",
+                  "format": "date",
+                  "nullable": true
+                },
+                "is_onboarded": {
+                  "type": "boolean"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date",
+                  "readOnly": true
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "users"
+    ],
+    "method": "post",
+    "path": "/users/",
+    "jsonRequestBodyExample": {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "first_name": "string",
+      "last_name": "string",
+      "wagpay_id": "string",
+      "email": "user@example.com",
+      "password": "string",
+      "profile_picture": "string",
+      "birth_date": "2022-09-09",
+      "is_onboarded": true,
+      "created_at": "2022-09-09",
+      "updated_at": "2022-09-09"
+    },
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "create User",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "users",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "POST",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "email",
+            "value": "<email>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "password",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "first_name",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "last_name",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "wagpay_id",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "profile_picture",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "birth_date",
+            "value": "<date>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "is_onboarded",
+            "value": "<boolean>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/create-user",
+  "previous": {
+    "title": "listUsers",
+    "permalink": "/api/list-users"
+  },
+  "next": {
+    "title": "retrieveUser",
+    "permalink": "/api/retrieve-user"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "fetcch-bridge/how-it-works",
+              "path": "/docs/fetcch-bridge/how-it-works",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-bridge/sdk/bridge",
+              "path": "/docs/fetcch-bridge/sdk/bridge",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-bridge/sdk/installation",
+              "path": "/docs/fetcch-bridge/sdk/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/api",
+              "path": "/docs/fetcch-x/api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/how-it-works",
+              "path": "/docs/fetcch-x/how-it-works",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/create-id",
+              "path": "/docs/fetcch-x/sdk/create-id",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/create-payment-requests",
+              "path": "/docs/fetcch-x/sdk/create-payment-requests",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/get-id",
+              "path": "/docs/fetcch-x/sdk/get-id",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/get-payment-requests",
+              "path": "/docs/fetcch-x/sdk/get-payment-requests",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/installation",
+              "path": "/docs/fetcch-x/sdk/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "open-source/fetcch-chain-data",
+              "path": "/docs/open-source/fetcch-chain-data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/fetcch-bridge",
+              "path": "/docs/category/fetcch-bridge",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/sdk",
+              "path": "/docs/category/sdk",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/fetcchx-id",
+              "path": "/docs/category/fetcchx-id",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/sdk-1",
+              "path": "/docs/category/sdk-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/open-source",
+              "path": "/docs/category/open-source",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

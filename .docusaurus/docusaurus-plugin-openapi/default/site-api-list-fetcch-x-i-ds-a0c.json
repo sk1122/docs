@@ -1,0 +1,253 @@
+{
+  "type": "api",
+  "id": "list-fetcch-x-i-ds",
+  "unversionedId": "list-fetcch-x-i-ds",
+  "title": "List FetcchX IDs",
+  "description": "",
+  "slug": "/list-fetcch-x-i-ds",
+  "frontMatter": {},
+  "api": {
+    "operationId": "List FetcchX IDs",
+    "description": "List FetcchX IDs",
+    "parameters": [
+      {
+        "name": "page",
+        "required": false,
+        "in": "query",
+        "description": "A page number within the paginated result set.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "example": 123
+                },
+                "next": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=4"
+                },
+                "previous": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=2"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "readOnly": true
+                      },
+                      "owner": {
+                        "type": "string",
+                        "readOnly": true
+                      },
+                      "requests": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer",
+                              "readOnly": true
+                            },
+                            "token": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "chain": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "amount": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "data": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "executed": {
+                              "type": "boolean"
+                            },
+                            "transaction_hash": {
+                              "type": "string",
+                              "nullable": true,
+                              "maxLength": 100
+                            },
+                            "same_chain": {
+                              "type": "boolean"
+                            },
+                            "dst_transaction_hash": {
+                              "type": "string",
+                              "nullable": true,
+                              "maxLength": 100
+                            },
+                            "message": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "label": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "created_at": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "updated_at": {
+                              "type": "string",
+                              "format": "date-time",
+                              "readOnly": true
+                            },
+                            "from_id": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "token",
+                            "chain",
+                            "amount",
+                            "data",
+                            "message",
+                            "label",
+                            "from_id"
+                          ]
+                        }
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "wagpay_id": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "identifier": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "default": {
+                        "type": "object"
+                      },
+                      "others": {
+                        "type": "object"
+                      },
+                      "forced_same_chain_payment": {
+                        "type": "boolean"
+                      },
+                      "phone_number": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 13
+                      },
+                      "synced_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                      }
+                    },
+                    "required": [
+                      "provider",
+                      "wagpay_id",
+                      "identifier",
+                      "default",
+                      "others"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "FetcchX ID"
+    ],
+    "method": "get",
+    "path": "/id/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "List Fetcch X I Ds",
+      "description": {
+        "content": "List FetcchX IDs",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "A page number within the paginated result set.",
+              "type": "text/plain"
+            },
+            "key": "page",
+            "value": "<integer>"
+          }
+        ],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/list-fetcch-x-i-ds",
+  "next": {
+    "title": "Create FetcchX ID",
+    "permalink": "/api/create-fetcch-x-id"
+  }
+}

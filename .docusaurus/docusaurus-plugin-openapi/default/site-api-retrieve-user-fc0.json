@@ -1,0 +1,162 @@
+{
+  "type": "api",
+  "id": "retrieve-user",
+  "unversionedId": "retrieve-user",
+  "title": "retrieveUser",
+  "description": "",
+  "slug": "/retrieve-user",
+  "frontMatter": {},
+  "api": {
+    "operationId": "retrieveUser",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "first_name": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 120
+                },
+                "last_name": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 120
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email",
+                  "maxLength": 254
+                },
+                "password": {
+                  "type": "string",
+                  "writeOnly": true
+                },
+                "profile_picture": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 240
+                },
+                "birth_date": {
+                  "type": "string",
+                  "format": "date",
+                  "nullable": true
+                },
+                "is_onboarded": {
+                  "type": "boolean"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date",
+                  "readOnly": true
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "users"
+    ],
+    "method": "get",
+    "path": "/users/{id}/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "retrieve User",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "users",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/retrieve-user",
+  "previous": {
+    "title": "createUser",
+    "permalink": "/api/create-user"
+  },
+  "next": {
+    "title": "updateUser",
+    "permalink": "/api/update-user"
+  }
+}

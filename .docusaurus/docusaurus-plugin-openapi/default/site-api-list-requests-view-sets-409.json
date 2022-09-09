@@ -1,0 +1,86 @@
+{
+  "type": "api",
+  "id": "list-requests-view-sets",
+  "unversionedId": "list-requests-view-sets",
+  "title": "listRequestsViewSets",
+  "description": "",
+  "slug": "/list-requests-view-sets",
+  "frontMatter": {},
+  "api": {
+    "operationId": "listRequestsViewSets",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {}
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "get",
+    "path": "/requests/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "list Requests View Sets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/list-requests-view-sets",
+  "previous": {
+    "title": "Destroy FetcchX ID",
+    "permalink": "/api/destroy-fetcch-x-id"
+  },
+  "next": {
+    "title": "createRequestsViewSet",
+    "permalink": "/api/create-requests-view-set"
+  }
+}

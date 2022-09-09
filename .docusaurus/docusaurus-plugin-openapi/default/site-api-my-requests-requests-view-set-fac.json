@@ -1,0 +1,84 @@
+{
+  "type": "api",
+  "id": "my-requests-requests-view-set",
+  "unversionedId": "my-requests-requests-view-set",
+  "title": "myRequestsRequestsViewSet",
+  "description": "",
+  "slug": "/my-requests-requests-view-set",
+  "frontMatter": {},
+  "api": {
+    "operationId": "myRequestsRequestsViewSet",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {}
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "get",
+    "path": "/requests/my/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "my Requests Requests View Set",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          "my",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/my-requests-requests-view-set",
+  "previous": {
+    "title": "Create Payment Request",
+    "permalink": "/api/create-payment-request"
+  },
+  "next": {
+    "title": "listUsers",
+    "permalink": "/api/list-users"
+  }
+}

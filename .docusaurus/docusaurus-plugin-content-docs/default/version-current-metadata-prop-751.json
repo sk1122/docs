@@ -1,0 +1,205 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "What is Fetcch?",
+        "href": "/docs/intro",
+        "docId": "intro"
+      },
+      {
+        "type": "category",
+        "label": "Fetcch Bridge",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "How it works?",
+            "href": "/docs/fetcch-bridge/how-it-works",
+            "docId": "fetcch-bridge/how-it-works"
+          },
+          {
+            "type": "category",
+            "label": "SDK",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Installation",
+                "href": "/docs/fetcch-bridge/sdk/installation",
+                "docId": "fetcch-bridge/sdk/installation"
+              },
+              {
+                "type": "link",
+                "label": "bridge()",
+                "href": "/docs/fetcch-bridge/sdk/bridge",
+                "docId": "fetcch-bridge/sdk/bridge"
+              }
+            ],
+            "href": "/docs/category/sdk"
+          }
+        ],
+        "href": "/docs/category/fetcch-bridge"
+      },
+      {
+        "type": "category",
+        "label": "FetcchX ID",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "How it works?",
+            "href": "/docs/fetcch-x/how-it-works",
+            "docId": "fetcch-x/how-it-works"
+          },
+          {
+            "type": "category",
+            "label": "SDK",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Installation",
+                "href": "/docs/fetcch-x/sdk/installation",
+                "docId": "fetcch-x/sdk/installation"
+              },
+              {
+                "type": "link",
+                "label": "Get ID Data",
+                "href": "/docs/fetcch-x/sdk/get-id",
+                "docId": "fetcch-x/sdk/get-id"
+              },
+              {
+                "type": "link",
+                "label": "Create ID",
+                "href": "/docs/fetcch-x/sdk/create-id",
+                "docId": "fetcch-x/sdk/create-id"
+              },
+              {
+                "type": "link",
+                "label": "Get Payment Requests",
+                "href": "/docs/fetcch-x/sdk/get-payment-requests",
+                "docId": "fetcch-x/sdk/get-payment-requests"
+              },
+              {
+                "type": "link",
+                "label": "Create Payment Requests",
+                "href": "/docs/fetcch-x/sdk/create-payment-requests",
+                "docId": "fetcch-x/sdk/create-payment-requests"
+              }
+            ],
+            "href": "/docs/category/sdk-1"
+          },
+          {
+            "type": "link",
+            "label": "FetcchX ID API",
+            "href": "/docs/fetcch-x/api",
+            "docId": "fetcch-x/api"
+          }
+        ],
+        "href": "/docs/category/fetcchx-id"
+      },
+      {
+        "type": "category",
+        "label": "Open Source",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Fetcch Chain Data",
+            "href": "/docs/open-source/fetcch-chain-data",
+            "docId": "open-source/fetcch-chain-data"
+          }
+        ],
+        "href": "/docs/category/open-source"
+      }
+    ]
+  },
+  "docs": {
+    "fetcch-bridge/how-it-works": {
+      "id": "fetcch-bridge/how-it-works",
+      "title": "How it works?",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-bridge/sdk/bridge": {
+      "id": "fetcch-bridge/sdk/bridge",
+      "title": "bridge()",
+      "description": "Bridge Token X on Chain A to Token Y on Chain B using Fetcch Bridge",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-bridge/sdk/installation": {
+      "id": "fetcch-bridge/sdk/installation",
+      "title": "Installation",
+      "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/api": {
+      "id": "fetcch-x/api",
+      "title": "FetcchX ID API",
+      "description": "Go to API",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/how-it-works": {
+      "id": "fetcch-x/how-it-works",
+      "title": "How it works?",
+      "description": "Currently Sailing, will soon dock the ship here...",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/create-id": {
+      "id": "fetcch-x/sdk/create-id",
+      "title": "Create ID",
+      "description": "Get ID Data from ID",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/create-payment-requests": {
+      "id": "fetcch-x/sdk/create-payment-requests",
+      "title": "Create Payment Requests",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/get-id": {
+      "id": "fetcch-x/sdk/get-id",
+      "title": "Get ID Data",
+      "description": "Get ID Data from ID",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/get-payment-requests": {
+      "id": "fetcch-x/sdk/get-payment-requests",
+      "title": "Get Payment Requests",
+      "description": "Sent to a user",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/installation": {
+      "id": "fetcch-x/sdk/installation",
+      "title": "Installation",
+      "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "What is Fetcch?",
+      "description": "Let's discover Fetcch in less than 5 minutes.",
+      "sidebar": "tutorialSidebar"
+    },
+    "open-source/fetcch-chain-data": {
+      "id": "open-source/fetcch-chain-data",
+      "title": "Fetcch Chain Data",
+      "description": "At Fetcch, we are building cross chain products, so we can't rely on EVM Chain Ids or Chain IDs which are specific to an ecosystem, so we have ourselves assigned IDs to each chain that we are using to make a seamless developer experice across Fetcch's products",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

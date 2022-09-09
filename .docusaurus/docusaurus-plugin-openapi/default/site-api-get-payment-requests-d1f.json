@@ -1,0 +1,104 @@
+{
+  "type": "api",
+  "id": "get-payment-requests",
+  "unversionedId": "get-payment-requests",
+  "title": "Get Payment Requests",
+  "description": "",
+  "slug": "/get-payment-requests",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Get Payment Requests",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "signed_msg",
+        "required": true,
+        "in": "query",
+        "description": "A Valid ECDSA Signature",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {}
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "Payment Requests"
+    ],
+    "method": "get",
+    "path": "/Payment Requests/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "Get Payment Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "Payment Requests",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "(Required) A Valid ECDSA Signature",
+              "type": "text/plain"
+            },
+            "key": "signed_msg",
+            "value": "<string>"
+          }
+        ],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/get-payment-requests",
+  "previous": {
+    "title": "Destroy FetcchX ID",
+    "permalink": "/api/destroy-fetcch-x-id"
+  },
+  "next": {
+    "title": "Create Payment Request",
+    "permalink": "/api/create-payment-request"
+  }
+}

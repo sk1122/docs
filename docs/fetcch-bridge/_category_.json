@@ -1,0 +1,8 @@
+{
+    "label": "Fetcch Bridge",
+    "position": 2,
+    "link": {
+        "type": "generated-index",
+        "description": "Introduction docs to get you started with @wagpay/id"
+    }
+}

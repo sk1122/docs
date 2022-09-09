@@ -1,0 +1,85 @@
+{
+  "apiSidebars": {
+    "openapi-sidebar-default": [
+      {
+        "type": "category",
+        "label": "FetcchX ID",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "List FetcchX IDs",
+            "href": "/api/list-fetcch-x-i-ds",
+            "docId": "list-fetcch-x-i-ds",
+            "className": "api-method get"
+          },
+          {
+            "type": "link",
+            "label": "Create FetcchX ID",
+            "href": "/api/create-fetcch-x-id",
+            "docId": "create-fetcch-x-id",
+            "className": "api-method post"
+          },
+          {
+            "type": "link",
+            "label": "Retreive Single FetcchX ID",
+            "href": "/api/retreive-single-fetcch-x-id",
+            "docId": "retreive-single-fetcch-x-id",
+            "className": "api-method get"
+          },
+          {
+            "type": "link",
+            "label": "Update FetcchX ID",
+            "href": "/api/update-fetcch-x-id",
+            "docId": "update-fetcch-x-id",
+            "className": "api-method put"
+          },
+          {
+            "type": "link",
+            "label": "Partial Update FetcchX ID",
+            "href": "/api/partial-update-fetcch-x-id",
+            "docId": "partial-update-fetcch-x-id",
+            "className": "api-method patch"
+          },
+          {
+            "type": "link",
+            "label": "Destroy FetcchX ID",
+            "href": "/api/destroy-fetcch-x-id",
+            "docId": "destroy-fetcch-x-id",
+            "className": "api-method delete"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Payment Requests",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Get Payment Requests",
+            "href": "/api/get-payment-requests",
+            "docId": "get-payment-requests",
+            "className": "api-method get"
+          },
+          {
+            "type": "link",
+            "label": "Create Payment Request",
+            "href": "/api/create-payment-request",
+            "docId": "create-payment-request",
+            "className": "api-method post"
+          },
+          {
+            "type": "link",
+            "label": "Get Payment Payment Requests sent by a user",
+            "href": "/api/get-payment-payment-requests-sent-by-a-user",
+            "docId": "get-payment-payment-requests-sent-by-a-user",
+            "className": "api-method get"
+          }
+        ]
+      }
+    ]
+  }
+}

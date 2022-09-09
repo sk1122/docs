@@ -1,0 +1,145 @@
+{
+  "type": "api",
+  "id": "list-providers",
+  "unversionedId": "list-providers",
+  "title": "listProviders",
+  "description": "",
+  "slug": "/list-providers",
+  "frontMatter": {},
+  "api": {
+    "operationId": "listProviders",
+    "description": "",
+    "parameters": [
+      {
+        "name": "page",
+        "required": false,
+        "in": "query",
+        "description": "A page number within the paginated result set.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "example": 123
+                },
+                "next": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=4"
+                },
+                "previous": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=2"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "api_key": {
+                        "type": "string",
+                        "format": "uuid",
+                        "readOnly": true
+                      },
+                      "owner": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "owner"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "providers"
+    ],
+    "method": "get",
+    "path": "/providers/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "list Providers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "providers",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "A page number within the paginated result set.",
+              "type": "text/plain"
+            },
+            "key": "page",
+            "value": "<integer>"
+          }
+        ],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/list-providers",
+  "previous": {
+    "title": "destroyUser",
+    "permalink": "/api/destroy-user"
+  },
+  "next": {
+    "title": "createProvider",
+    "permalink": "/api/create-provider"
+  }
+}

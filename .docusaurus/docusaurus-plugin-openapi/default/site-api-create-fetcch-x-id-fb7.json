@@ -1,0 +1,699 @@
+{
+  "type": "api",
+  "id": "create-fetcch-x-id",
+  "unversionedId": "create-fetcch-x-id",
+  "title": "Create FetcchX ID",
+  "description": "",
+  "slug": "/create-fetcch-x-id",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Create FetcchX ID",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "signed_msg",
+        "required": true,
+        "in": "query",
+        "description": "A Valid ECDSA Signature",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string",
+                "readOnly": true
+              },
+              "requests": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "readOnly": true
+                    },
+                    "token": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "chain": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "amount": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "data": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "executed": {
+                      "type": "boolean"
+                    },
+                    "transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "same_chain": {
+                      "type": "boolean"
+                    },
+                    "dst_transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "message": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "label": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "readOnly": true
+                    },
+                    "from_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "token",
+                    "chain",
+                    "amount",
+                    "data",
+                    "message",
+                    "label",
+                    "from_id"
+                  ]
+                }
+              },
+              "provider": {
+                "type": "string"
+              },
+              "wagpay_id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "identifier": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "default": {
+                "type": "object"
+              },
+              "others": {
+                "type": "object"
+              },
+              "forced_same_chain_payment": {
+                "type": "boolean"
+              },
+              "phone_number": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 13
+              },
+              "synced_at": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "provider",
+              "wagpay_id",
+              "identifier",
+              "default",
+              "others"
+            ]
+          }
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string",
+                "readOnly": true
+              },
+              "requests": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "readOnly": true
+                    },
+                    "token": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "chain": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "amount": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "data": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "executed": {
+                      "type": "boolean"
+                    },
+                    "transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "same_chain": {
+                      "type": "boolean"
+                    },
+                    "dst_transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "message": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "label": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "readOnly": true
+                    },
+                    "from_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "token",
+                    "chain",
+                    "amount",
+                    "data",
+                    "message",
+                    "label",
+                    "from_id"
+                  ]
+                }
+              },
+              "provider": {
+                "type": "string"
+              },
+              "wagpay_id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "identifier": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "default": {
+                "type": "object"
+              },
+              "others": {
+                "type": "object"
+              },
+              "forced_same_chain_payment": {
+                "type": "boolean"
+              },
+              "phone_number": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 13
+              },
+              "synced_at": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "provider",
+              "wagpay_id",
+              "identifier",
+              "default",
+              "others"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string",
+                "readOnly": true
+              },
+              "requests": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "readOnly": true
+                    },
+                    "token": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "chain": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "amount": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "data": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "executed": {
+                      "type": "boolean"
+                    },
+                    "transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "same_chain": {
+                      "type": "boolean"
+                    },
+                    "dst_transaction_hash": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 100
+                    },
+                    "message": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "label": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "readOnly": true
+                    },
+                    "from_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "token",
+                    "chain",
+                    "amount",
+                    "data",
+                    "message",
+                    "label",
+                    "from_id"
+                  ]
+                }
+              },
+              "provider": {
+                "type": "string"
+              },
+              "wagpay_id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "identifier": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "default": {
+                "type": "object"
+              },
+              "others": {
+                "type": "object"
+              },
+              "forced_same_chain_payment": {
+                "type": "boolean"
+              },
+              "phone_number": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 13
+              },
+              "synced_at": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "provider",
+              "wagpay_id",
+              "identifier",
+              "default",
+              "others"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "owner": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "requests": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "readOnly": true
+                      },
+                      "token": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "chain": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "amount": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "data": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "executed": {
+                        "type": "boolean"
+                      },
+                      "transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                      },
+                      "same_chain": {
+                        "type": "boolean"
+                      },
+                      "dst_transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                      },
+                      "message": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "label": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                      },
+                      "from_id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "token",
+                      "chain",
+                      "amount",
+                      "data",
+                      "message",
+                      "label",
+                      "from_id"
+                    ]
+                  }
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "default": {
+                  "type": "object"
+                },
+                "others": {
+                  "type": "object"
+                },
+                "forced_same_chain_payment": {
+                  "type": "boolean"
+                },
+                "phone_number": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 13
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "provider",
+                "wagpay_id",
+                "identifier",
+                "default",
+                "others"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "FetcchX ID"
+    ],
+    "method": "post",
+    "path": "/id/",
+    "jsonRequestBodyExample": {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "owner": "string",
+      "requests": [
+        {
+          "id": 0,
+          "token": "string",
+          "chain": "string",
+          "amount": "string",
+          "data": "string",
+          "executed": true,
+          "transaction_hash": "string",
+          "same_chain": true,
+          "dst_transaction_hash": "string",
+          "message": "string",
+          "label": "string",
+          "created_at": "string",
+          "updated_at": "string",
+          "from_id": "string"
+        }
+      ],
+      "provider": "string",
+      "wagpay_id": "string",
+      "identifier": "string",
+      "default": {},
+      "others": {},
+      "forced_same_chain_payment": true,
+      "phone_number": "string",
+      "synced_at": "string",
+      "created_at": "string",
+      "updated_at": "string"
+    },
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "Create Fetcch X ID",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "(Required) A Valid ECDSA Signature",
+              "type": "text/plain"
+            },
+            "key": "signed_msg",
+            "value": "<string>"
+          }
+        ],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "POST",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "type",
+            "value": "object"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "default",
+            "value": "<object>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/create-fetcch-x-id",
+  "previous": {
+    "title": "List FetcchX IDs",
+    "permalink": "/api/list-fetcch-x-i-ds"
+  },
+  "next": {
+    "title": "Retreive Single FetcchX ID",
+    "permalink": "/api/retreive-single-fetcch-x-id"
+  }
+}

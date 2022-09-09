@@ -1,0 +1,86 @@
+{
+  "type": "api",
+  "id": "get-payment-payment-requests",
+  "unversionedId": "get-payment-payment-requests",
+  "title": "Get Payment Payment Requests",
+  "description": "",
+  "slug": "/get-payment-payment-requests",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Get Payment Payment Requests",
+    "description": "",
+    "parameters": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "in": "header",
+        "description": "Your FetcchX Provider API Key",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {}
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "Payment Requests"
+    ],
+    "method": "get",
+    "path": "/Payment Requests/",
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "Get Payment Payment Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "Payment Requests",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "description": {
+            "content": "(Required) Your FetcchX Provider API Key",
+            "type": "text/plain"
+          },
+          "key": "X-API-KEY",
+          "value": "<string>"
+        }
+      ],
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/get-payment-payment-requests",
+  "previous": {
+    "title": "Destroy FetcchX ID",
+    "permalink": "/api/destroy-fetcch-x-id"
+  },
+  "next": {
+    "title": "Create Payment Request",
+    "permalink": "/api/create-payment-request"
+  }
+}

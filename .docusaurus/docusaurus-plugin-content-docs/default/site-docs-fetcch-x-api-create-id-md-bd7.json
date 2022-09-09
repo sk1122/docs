@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/api/create-id",
+  "id": "fetcch-x/api/create-id",
+  "title": "Create ID",
+  "description": "- API URL//id.fetcch.xyz/api/id",
+  "source": "@site/docs/fetcch-x/api/create-id.md",
+  "sourceDirName": "fetcch-x/api",
+  "slug": "/fetcch-x/api/create-id",
+  "permalink": "/docs/fetcch-x/api/create-id",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/api/create-id.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Get ID Data",
+    "permalink": "/docs/fetcch-x/api/get-id"
+  },
+  "next": {
+    "title": "Create Payment Requests",
+    "permalink": "/docs/fetcch-x/api/create-payment-requests"
+  }
+}

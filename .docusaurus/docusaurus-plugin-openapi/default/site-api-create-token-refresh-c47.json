@@ -1,0 +1,157 @@
+{
+  "type": "api",
+  "id": "create-token-refresh",
+  "unversionedId": "create-token-refresh",
+  "title": "createTokenRefresh",
+  "description": "",
+  "slug": "/create-token-refresh",
+  "frontMatter": {},
+  "api": {
+    "operationId": "createTokenRefresh",
+    "description": "Takes a refresh type JSON web token and returns an access type JSON web\ntoken if the refresh token is valid.",
+    "parameters": [],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "refresh": {
+                "type": "string"
+              },
+              "access": {
+                "type": "string",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "refresh"
+            ]
+          }
+        },
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "refresh": {
+                "type": "string"
+              },
+              "access": {
+                "type": "string",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "refresh"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "refresh": {
+                "type": "string"
+              },
+              "access": {
+                "type": "string",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "refresh"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "refresh": {
+                  "type": "string"
+                },
+                "access": {
+                  "type": "string",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "refresh"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "v1"
+    ],
+    "method": "post",
+    "path": "/v1/token/refresh/",
+    "jsonRequestBodyExample": {
+      "refresh": "string",
+      "access": "string"
+    },
+    "info": {
+      "title": "FetcchX ID",
+      "version": "v0.1"
+    },
+    "postman": {
+      "name": "create Token Refresh",
+      "description": {
+        "content": "Takes a refresh type JSON web token and returns an access type JSON web\ntoken if the refresh token is valid.",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "v1",
+          "token",
+          "refresh",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "POST",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "refresh",
+            "value": "<string>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/create-token-refresh",
+  "previous": {
+    "title": "createTokenObtainPair",
+    "permalink": "/api/create-token-obtain-pair"
+  },
+  "next": {
+    "title": "updateRequestsViewSet",
+    "permalink": "/api/update-requests-view-set"
+  }
+}

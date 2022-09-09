@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/api/create-payment-requests",
+  "id": "fetcch-x/api/create-payment-requests",
+  "title": "Create Payment Requests",
+  "description": "- API URL//id.fetcch.xyz/api/requests/",
+  "source": "@site/docs/fetcch-x/api/create-payment-requests.md",
+  "sourceDirName": "fetcch-x/api",
+  "slug": "/fetcch-x/api/create-payment-requests",
+  "permalink": "/docs/fetcch-x/api/create-payment-requests",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/api/create-payment-requests.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create ID",
+    "permalink": "/docs/fetcch-x/api/create-id"
+  },
+  "next": {
+    "title": "How it works?",
+    "permalink": "/docs/fetcch-x/how-it-works"
+  }
+}

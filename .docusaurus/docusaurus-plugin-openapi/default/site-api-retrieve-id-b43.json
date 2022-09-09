@@ -1,0 +1,216 @@
+{
+  "type": "api",
+  "id": "retrieve-id",
+  "unversionedId": "retrieve-id",
+  "title": "retrieveID",
+  "description": "",
+  "slug": "/retrieve-id",
+  "frontMatter": {},
+  "api": {
+    "operationId": "retrieveID",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "owner": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "requests": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "readOnly": true
+                      },
+                      "token": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "chain": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "amount": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "data": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "executed": {
+                        "type": "boolean"
+                      },
+                      "transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                      },
+                      "same_chain": {
+                        "type": "boolean"
+                      },
+                      "dst_transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                      },
+                      "message": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "label": {
+                        "type": "string",
+                        "maxLength": 50
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                      },
+                      "from_id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "token",
+                      "chain",
+                      "amount",
+                      "data",
+                      "message",
+                      "label",
+                      "from_id"
+                    ]
+                  }
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "default": {
+                  "type": "object"
+                },
+                "others": {
+                  "type": "object"
+                },
+                "forced_same_chain_payment": {
+                  "type": "boolean"
+                },
+                "phone_number": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 13
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "provider",
+                "wagpay_id",
+                "identifier",
+                "default",
+                "others"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "id"
+    ],
+    "method": "get",
+    "path": "/id/{id}/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "retrieve ID",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/retrieve-id",
+  "previous": {
+    "title": "Create FetcchX ID",
+    "permalink": "/api/create-fetcch-x-id"
+  },
+  "next": {
+    "title": "updateID",
+    "permalink": "/api/update-id"
+  }
+}
