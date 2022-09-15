@@ -1,0 +1,517 @@
+{
+  "type": "api",
+  "id": "update-requests",
+  "unversionedId": "update-requests",
+  "title": "updateRequests",
+  "description": "",
+  "slug": "/update-requests",
+  "frontMatter": {},
+  "api": {
+    "operationId": "updateRequests",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
+        },
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "readOnly": true
+                },
+                "token": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "amount": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "data": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 50
+                },
+                "executed": {
+                  "type": "boolean"
+                },
+                "transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "same_chain": {
+                  "type": "boolean"
+                },
+                "dst_transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "message": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "label": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                },
+                "from_id": {
+                  "type": "string"
+                },
+                "to_id": {
+                  "type": "string"
+                },
+                "chain": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "token",
+                "amount",
+                "message",
+                "label",
+                "from_id",
+                "to_id",
+                "chain"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "put",
+    "path": "/requests/{id}/",
+    "jsonRequestBodyExample": {
+      "id": 0,
+      "token": "string",
+      "amount": "string",
+      "data": "string",
+      "executed": true,
+      "transaction_hash": "string",
+      "same_chain": true,
+      "dst_transaction_hash": "string",
+      "message": "string",
+      "label": "string",
+      "created_at": "string",
+      "updated_at": "string",
+      "from_id": "string",
+      "to_id": "string",
+      "chain": 0
+    },
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "update Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "PUT",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "token",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "amount",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "message",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "label",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "from_id",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "to_id",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "chain",
+            "value": "<integer>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "data",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "executed",
+            "value": "<boolean>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "transaction_hash",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "same_chain",
+            "value": "<boolean>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "dst_transaction_hash",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "created_at",
+            "value": "<dateTime>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/update-requests",
+  "previous": {
+    "title": "Get Request from id",
+    "permalink": "/api/get-request-from-id"
+  },
+  "next": {
+    "title": "partialUpdateRequests",
+    "permalink": "/api/partial-update-requests"
+  }
+}

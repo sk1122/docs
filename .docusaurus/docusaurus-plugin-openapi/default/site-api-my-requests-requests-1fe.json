@@ -1,0 +1,136 @@
+{
+  "type": "api",
+  "id": "my-requests-requests",
+  "unversionedId": "my-requests-requests",
+  "title": "myRequestsRequests",
+  "description": "",
+  "slug": "/my-requests-requests",
+  "frontMatter": {},
+  "api": {
+    "operationId": "myRequestsRequests",
+    "description": "",
+    "parameters": [],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "readOnly": true
+                },
+                "token": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "amount": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "data": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 50
+                },
+                "executed": {
+                  "type": "boolean"
+                },
+                "transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "same_chain": {
+                  "type": "boolean"
+                },
+                "dst_transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "message": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "label": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                },
+                "from_id": {
+                  "type": "string"
+                },
+                "to_id": {
+                  "type": "string"
+                },
+                "chain": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "token",
+                "amount",
+                "message",
+                "label",
+                "from_id",
+                "to_id",
+                "chain"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "get",
+    "path": "/requests/my/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "my Requests Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          "my",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/my-requests-requests",
+  "previous": {
+    "title": "Create Payment Request",
+    "permalink": "/api/create-payment-request"
+  },
+  "next": {
+    "title": "retrieveRequests",
+    "permalink": "/api/retrieve-requests"
+  }
+}

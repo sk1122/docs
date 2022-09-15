@@ -3,51 +3,73 @@
     "openapi-sidebar-default": [
       {
         "type": "category",
-        "label": "FetcchX ID",
+        "label": "ID Config",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "List FetcchX IDs",
-            "href": "/api/list-fetcch-x-i-ds",
-            "docId": "list-fetcch-x-i-ds",
+            "label": "Get ID Config",
+            "href": "/api/get-id-config",
+            "docId": "get-id-config",
             "className": "api-method get"
           },
           {
             "type": "link",
-            "label": "Create FetcchX ID",
-            "href": "/api/create-fetcch-x-id",
-            "docId": "create-fetcch-x-id",
+            "label": "Update ID Config",
+            "href": "/api/update-id-config",
+            "docId": "update-id-config",
+            "className": "api-method put"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "ID",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Create ID",
+            "href": "/api/create-id",
+            "docId": "create-id",
             "className": "api-method post"
           },
           {
             "type": "link",
-            "label": "Retreive Single FetcchX ID",
-            "href": "/api/retreive-single-fetcch-x-id",
-            "docId": "retreive-single-fetcch-x-id",
+            "label": "Find appropriate address to chain",
+            "href": "/api/find-appropriate-address-to-chain",
+            "docId": "find-appropriate-address-to-chain",
             "className": "api-method get"
           },
           {
             "type": "link",
-            "label": "Update FetcchX ID",
-            "href": "/api/update-fetcch-x-id",
-            "docId": "update-fetcch-x-id",
+            "label": "Get ID",
+            "href": "/api/get-id",
+            "docId": "get-id",
+            "className": "api-method get"
+          },
+          {
+            "type": "link",
+            "label": "Update ID",
+            "href": "/api/update-id",
+            "docId": "update-id",
             "className": "api-method put"
           },
           {
             "type": "link",
-            "label": "Partial Update FetcchX ID",
-            "href": "/api/partial-update-fetcch-x-id",
-            "docId": "partial-update-fetcch-x-id",
-            "className": "api-method patch"
+            "label": "Change Default Address",
+            "href": "/api/change-default-address",
+            "docId": "change-default-address",
+            "className": "api-method put"
           },
           {
             "type": "link",
-            "label": "Destroy FetcchX ID",
-            "href": "/api/destroy-fetcch-x-id",
-            "docId": "destroy-fetcch-x-id",
-            "className": "api-method delete"
+            "label": "Change Other Addresses",
+            "href": "/api/change-other-addresses",
+            "docId": "change-other-addresses",
+            "className": "api-method put"
           }
         ]
       },
@@ -59,9 +81,9 @@
         "items": [
           {
             "type": "link",
-            "label": "Get Payment Requests",
-            "href": "/api/get-payment-requests",
-            "docId": "get-payment-requests",
+            "label": "Get Requests",
+            "href": "/api/get-requests",
+            "docId": "get-requests",
             "className": "api-method get"
           },
           {
@@ -73,10 +95,17 @@
           },
           {
             "type": "link",
-            "label": "Get Payment Payment Requests sent by a user",
-            "href": "/api/get-payment-payment-requests-sent-by-a-user",
-            "docId": "get-payment-payment-requests-sent-by-a-user",
+            "label": "Get Request from id",
+            "href": "/api/get-request-from-id",
+            "docId": "get-request-from-id",
             "className": "api-method get"
+          },
+          {
+            "type": "link",
+            "label": "Update Payment Request",
+            "href": "/api/update-payment-request",
+            "docId": "update-payment-request",
+            "className": "api-method put"
           }
         ]
       }

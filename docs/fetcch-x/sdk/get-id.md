@@ -12,7 +12,9 @@ import { getId } from "@fetcch/id"
 
 getId({
     apiKey: "YOUR_API_KEY",
-    id: "satyam@wagpay"
+    data: {
+        id: "satyam@wagpay"
+    }
 })
     .then(result => {
         console.log(result)
@@ -55,7 +57,9 @@ import { getId } from "@fetcch/id"
 
 getId({
     apiKey: "YOUR_API_KEY",
-    signedMsg: "0x000000"
+    data: {
+        signedMsg: "0x000000"
+    }
 })
     .then(result => {
         console.log(result)

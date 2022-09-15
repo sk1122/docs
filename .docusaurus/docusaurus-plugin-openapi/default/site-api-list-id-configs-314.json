@@ -1,0 +1,252 @@
+{
+  "type": "api",
+  "id": "list-id-configs",
+  "unversionedId": "list-id-configs",
+  "title": "listIDConfigs",
+  "description": "",
+  "slug": "/list-id-configs",
+  "frontMatter": {},
+  "api": {
+    "operationId": "listIDConfigs",
+    "description": "",
+    "parameters": [
+      {
+        "name": "page",
+        "required": false,
+        "in": "query",
+        "description": "A page number within the paginated result set.",
+        "schema": {
+          "type": "integer"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "example": 123
+                },
+                "next": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=4"
+                },
+                "previous": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "uri",
+                  "example": "http://api.example.org/accounts/?page=2"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "readOnly": true
+                      },
+                      "forced_same_chain_payment": {
+                        "type": "boolean"
+                      },
+                      "wagpay_id": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "readOnly": true
+                          },
+                          "wagpay_id": {
+                            "type": "string",
+                            "maxLength": 50
+                          },
+                          "identifier": {
+                            "type": "string",
+                            "maxLength": 50
+                          },
+                          "assume_high_security": {
+                            "type": "boolean"
+                          },
+                          "arweave_commit_hash": {
+                            "type": "string",
+                            "nullable": true,
+                            "maxLength": 257
+                          },
+                          "synced_at": {
+                            "type": "string",
+                            "format": "date-time",
+                            "nullable": true
+                          },
+                          "created_at": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updated_at": {
+                            "type": "string",
+                            "format": "date-time",
+                            "readOnly": true
+                          },
+                          "provider": {
+                            "type": "string"
+                          },
+                          "default": {
+                            "type": "string"
+                          },
+                          "others": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "required": [
+                          "wagpay_id",
+                          "identifier",
+                          "provider",
+                          "default",
+                          "others"
+                        ],
+                        "readOnly": true
+                      },
+                      "requests": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer",
+                              "readOnly": true
+                            },
+                            "token": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "amount": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "data": {
+                              "type": "string",
+                              "nullable": true,
+                              "maxLength": 50
+                            },
+                            "executed": {
+                              "type": "boolean"
+                            },
+                            "transaction_hash": {
+                              "type": "string",
+                              "nullable": true,
+                              "maxLength": 100
+                            },
+                            "same_chain": {
+                              "type": "boolean"
+                            },
+                            "dst_transaction_hash": {
+                              "type": "string",
+                              "nullable": true,
+                              "maxLength": 100
+                            },
+                            "message": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "label": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "created_at": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "updated_at": {
+                              "type": "string",
+                              "format": "date-time",
+                              "readOnly": true
+                            },
+                            "from_id": {
+                              "type": "string"
+                            },
+                            "to_id": {
+                              "type": "string"
+                            },
+                            "chain": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "token",
+                            "amount",
+                            "message",
+                            "label",
+                            "from_id",
+                            "to_id",
+                            "chain"
+                          ]
+                        },
+                        "readOnly": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "id"
+    ],
+    "method": "get",
+    "path": "/id/config/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "list ID Configs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          "config",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [
+          {
+            "description": {
+              "content": "A page number within the paginated result set.",
+              "type": "text/plain"
+            },
+            "key": "page",
+            "value": "<integer>"
+          }
+        ],
+        "variable": []
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/list-id-configs",
+  "next": {
+    "title": "createIDConfig",
+    "permalink": "/api/create-id-config"
+  }
+}

@@ -69,11 +69,11 @@
   "sourceDirName": ".",
   "permalink": "/api/destroy-id",
   "previous": {
-    "title": "Partial Update FetcchX ID",
-    "permalink": "/api/partial-update-fetcch-x-id"
+    "title": "partialUpdateID",
+    "permalink": "/api/partial-update-id"
   },
   "next": {
-    "title": "getTokenBalancesID",
-    "permalink": "/api/get-token-balances-id"
+    "title": "listRequests",
+    "permalink": "/api/list-requests"
   }
 }

@@ -8,7 +8,7 @@
   "frontMatter": {},
   "api": {
     "operationId": "listIDs",
-    "description": "List IDs",
+    "description": "",
     "parameters": [
       {
         "name": "page",
@@ -53,85 +53,47 @@
                         "format": "uuid",
                         "readOnly": true
                       },
-                      "owner": {
+                      "provider": {
                         "type": "string",
                         "readOnly": true
                       },
-                      "requests": {
+                      "default": {
+                        "type": "object",
+                        "properties": {
+                          "address": {
+                            "type": "string",
+                            "maxLength": 100
+                          },
+                          "network": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "address",
+                          "network"
+                        ]
+                      },
+                      "others": {
                         "type": "array",
                         "items": {
                           "type": "object",
                           "properties": {
-                            "id": {
-                              "type": "integer",
-                              "readOnly": true
-                            },
-                            "token": {
+                            "address": {
                               "type": "string",
-                              "maxLength": 50
-                            },
-                            "chain": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "amount": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "data": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "executed": {
-                              "type": "boolean"
-                            },
-                            "transaction_hash": {
-                              "type": "string",
-                              "nullable": true,
                               "maxLength": 100
                             },
-                            "same_chain": {
-                              "type": "boolean"
-                            },
-                            "dst_transaction_hash": {
-                              "type": "string",
-                              "nullable": true,
-                              "maxLength": 100
-                            },
-                            "message": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "label": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "created_at": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "updated_at": {
-                              "type": "string",
-                              "format": "date-time",
-                              "readOnly": true
-                            },
-                            "from_id": {
-                              "type": "string"
+                            "network": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer"
+                              }
                             }
                           },
                           "required": [
-                            "token",
-                            "chain",
-                            "amount",
-                            "data",
-                            "message",
-                            "label",
-                            "from_id"
+                            "address",
+                            "network"
                           ]
                         }
-                      },
-                      "provider": {
-                        "type": "string"
                       },
                       "wagpay_id": {
                         "type": "string",
@@ -141,19 +103,13 @@
                         "type": "string",
                         "maxLength": 50
                       },
-                      "default": {
-                        "type": "object"
-                      },
-                      "others": {
-                        "type": "object"
-                      },
-                      "forced_same_chain_payment": {
+                      "assume_high_security": {
                         "type": "boolean"
                       },
-                      "phone_number": {
+                      "arweave_commit_hash": {
                         "type": "string",
                         "nullable": true,
-                        "maxLength": 13
+                        "maxLength": 257
                       },
                       "synced_at": {
                         "type": "string",
@@ -171,12 +127,10 @@
                       }
                     },
                     "required": [
-                      "requests",
-                      "provider",
-                      "wagpay_id",
-                      "identifier",
                       "default",
-                      "others"
+                      "others",
+                      "wagpay_id",
+                      "identifier"
                     ]
                   }
                 }
@@ -199,7 +153,7 @@
     "postman": {
       "name": "list I Ds",
       "description": {
-        "content": "List IDs",
+        "content": "",
         "type": "text/plain"
       },
       "url": {
@@ -228,6 +182,10 @@
   "source": "@site/openapi.json",
   "sourceDirName": ".",
   "permalink": "/api/list-i-ds",
+  "previous": {
+    "title": "destroyIDConfig",
+    "permalink": "/api/destroy-id-config"
+  },
   "next": {
     "title": "createID",
     "permalink": "/api/create-id"

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/sdk/pay",
+  "id": "fetcch-x/sdk/pay",
+  "title": "Pay",
+  "description": "P2P payment",
+  "source": "@site/docs/fetcch-x/sdk/pay.md",
+  "sourceDirName": "fetcch-x/sdk",
+  "slug": "/fetcch-x/sdk/pay",
+  "permalink": "/docs/fetcch-x/sdk/pay",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/pay.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create Payment Requests",
+    "permalink": "/docs/fetcch-x/sdk/create-payment-requests"
+  },
+  "next": {
+    "title": "FetcchX ID API",
+    "permalink": "/docs/fetcch-x/api"
+  }
+}

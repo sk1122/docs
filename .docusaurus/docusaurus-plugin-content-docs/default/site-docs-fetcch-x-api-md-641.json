@@ -17,8 +17,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create Payment Requests",
-    "permalink": "/docs/fetcch-x/sdk/create-payment-requests"
+    "title": "Pay",
+    "permalink": "/docs/fetcch-x/sdk/pay"
   },
   "next": {
     "title": "Open Source",

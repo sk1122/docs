@@ -18,42 +18,10 @@
         "schema": {
           "type": "string"
         }
-      },
-      {
-        "name": "X-API-KEY",
-        "required": true,
-        "in": "header",
-        "description": "Your FetcchX Provider API Key",
-        "schema": {
-          "type": "string"
-        }
       }
     ],
     "requestBody": {
       "content": {
-        "application/json": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "maxLength": 50
-              },
-              "api_key": {
-                "type": "string",
-                "format": "uuid",
-                "readOnly": true
-              },
-              "owner": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "id",
-              "owner"
-            ]
-          }
-        },
         "application/x-www-form-urlencoded": {
           "schema": {
             "type": "object",
@@ -78,6 +46,29 @@
           }
         },
         "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "api_key": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "owner": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "owner"
+            ]
+          }
+        },
+        "application/json": {
           "schema": {
             "type": "object",
             "properties": {
@@ -143,8 +134,8 @@
       "owner": "string"
     },
     "info": {
-      "title": "FetcchX ID",
-      "version": "v0.1"
+      "title": "",
+      "version": ""
     },
     "postman": {
       "name": "update Provider",
@@ -175,14 +166,6 @@
         ]
       },
       "header": [
-        {
-          "description": {
-            "content": "(Required) Your FetcchX Provider API Key",
-            "type": "text/plain"
-          },
-          "key": "X-API-KEY",
-          "value": "<string>"
-        },
         {
           "key": "Content-Type",
           "value": "application/x-www-form-urlencoded"

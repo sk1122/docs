@@ -22,141 +22,6 @@
     ],
     "requestBody": {
       "content": {
-        "application/json": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uuid",
-                "readOnly": true
-              },
-              "owner": {
-                "type": "string",
-                "readOnly": true
-              },
-              "requests": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer",
-                      "readOnly": true
-                    },
-                    "token": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "chain": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "amount": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "data": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "executed": {
-                      "type": "boolean"
-                    },
-                    "transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
-                      "maxLength": 100
-                    },
-                    "same_chain": {
-                      "type": "boolean"
-                    },
-                    "dst_transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
-                      "maxLength": 100
-                    },
-                    "message": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "label": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "created_at": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updated_at": {
-                      "type": "string",
-                      "format": "date-time",
-                      "readOnly": true
-                    },
-                    "from_id": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "token",
-                    "chain",
-                    "amount",
-                    "data",
-                    "message",
-                    "label",
-                    "from_id"
-                  ]
-                }
-              },
-              "provider": {
-                "type": "string"
-              },
-              "wagpay_id": {
-                "type": "string",
-                "maxLength": 50
-              },
-              "identifier": {
-                "type": "string",
-                "maxLength": 50
-              },
-              "default": {
-                "type": "object"
-              },
-              "others": {
-                "type": "object"
-              },
-              "forced_same_chain_payment": {
-                "type": "boolean"
-              },
-              "phone_number": {
-                "type": "string",
-                "nullable": true,
-                "maxLength": 13
-              },
-              "synced_at": {
-                "type": "string",
-                "format": "date-time",
-                "nullable": true
-              },
-              "created_at": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time",
-                "readOnly": true
-              }
-            },
-            "required": [
-              "provider",
-              "wagpay_id",
-              "identifier",
-              "default",
-              "others"
-            ]
-          }
-        },
         "application/x-www-form-urlencoded": {
           "schema": {
             "type": "object",
@@ -166,85 +31,47 @@
                 "format": "uuid",
                 "readOnly": true
               },
-              "owner": {
+              "provider": {
                 "type": "string",
                 "readOnly": true
               },
-              "requests": {
+              "default": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  "network": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "address",
+                  "network"
+                ]
+              },
+              "others": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "integer",
-                      "readOnly": true
-                    },
-                    "token": {
+                    "address": {
                       "type": "string",
-                      "maxLength": 50
-                    },
-                    "chain": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "amount": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "data": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "executed": {
-                      "type": "boolean"
-                    },
-                    "transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
                       "maxLength": 100
                     },
-                    "same_chain": {
-                      "type": "boolean"
-                    },
-                    "dst_transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
-                      "maxLength": 100
-                    },
-                    "message": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "label": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "created_at": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updated_at": {
-                      "type": "string",
-                      "format": "date-time",
-                      "readOnly": true
-                    },
-                    "from_id": {
-                      "type": "string"
+                    "network": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
                     }
                   },
                   "required": [
-                    "token",
-                    "chain",
-                    "amount",
-                    "data",
-                    "message",
-                    "label",
-                    "from_id"
+                    "address",
+                    "network"
                   ]
                 }
-              },
-              "provider": {
-                "type": "string"
               },
               "wagpay_id": {
                 "type": "string",
@@ -254,19 +81,13 @@
                 "type": "string",
                 "maxLength": 50
               },
-              "default": {
-                "type": "object"
-              },
-              "others": {
-                "type": "object"
-              },
-              "forced_same_chain_payment": {
+              "assume_high_security": {
                 "type": "boolean"
               },
-              "phone_number": {
+              "arweave_commit_hash": {
                 "type": "string",
                 "nullable": true,
-                "maxLength": 13
+                "maxLength": 257
               },
               "synced_at": {
                 "type": "string",
@@ -284,11 +105,10 @@
               }
             },
             "required": [
-              "provider",
-              "wagpay_id",
-              "identifier",
               "default",
-              "others"
+              "others",
+              "wagpay_id",
+              "identifier"
             ]
           }
         },
@@ -301,85 +121,47 @@
                 "format": "uuid",
                 "readOnly": true
               },
-              "owner": {
+              "provider": {
                 "type": "string",
                 "readOnly": true
               },
-              "requests": {
+              "default": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  "network": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "address",
+                  "network"
+                ]
+              },
+              "others": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "integer",
-                      "readOnly": true
-                    },
-                    "token": {
+                    "address": {
                       "type": "string",
-                      "maxLength": 50
-                    },
-                    "chain": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "amount": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "data": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "executed": {
-                      "type": "boolean"
-                    },
-                    "transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
                       "maxLength": 100
                     },
-                    "same_chain": {
-                      "type": "boolean"
-                    },
-                    "dst_transaction_hash": {
-                      "type": "string",
-                      "nullable": true,
-                      "maxLength": 100
-                    },
-                    "message": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "label": {
-                      "type": "string",
-                      "maxLength": 50
-                    },
-                    "created_at": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updated_at": {
-                      "type": "string",
-                      "format": "date-time",
-                      "readOnly": true
-                    },
-                    "from_id": {
-                      "type": "string"
+                    "network": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
                     }
                   },
                   "required": [
-                    "token",
-                    "chain",
-                    "amount",
-                    "data",
-                    "message",
-                    "label",
-                    "from_id"
+                    "address",
+                    "network"
                   ]
                 }
-              },
-              "provider": {
-                "type": "string"
               },
               "wagpay_id": {
                 "type": "string",
@@ -389,19 +171,13 @@
                 "type": "string",
                 "maxLength": 50
               },
-              "default": {
-                "type": "object"
-              },
-              "others": {
-                "type": "object"
-              },
-              "forced_same_chain_payment": {
+              "assume_high_security": {
                 "type": "boolean"
               },
-              "phone_number": {
+              "arweave_commit_hash": {
                 "type": "string",
                 "nullable": true,
-                "maxLength": 13
+                "maxLength": 257
               },
               "synced_at": {
                 "type": "string",
@@ -419,11 +195,100 @@
               }
             },
             "required": [
-              "provider",
-              "wagpay_id",
-              "identifier",
               "default",
-              "others"
+              "others",
+              "wagpay_id",
+              "identifier"
+            ]
+          }
+        },
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "provider": {
+                "type": "string",
+                "readOnly": true
+              },
+              "default": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  "network": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "address",
+                  "network"
+                ]
+              },
+              "others": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                }
+              },
+              "wagpay_id": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "identifier": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "assume_high_security": {
+                "type": "boolean"
+              },
+              "arweave_commit_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 257
+              },
+              "synced_at": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "default",
+              "others",
+              "wagpay_id",
+              "identifier"
             ]
           }
         }
@@ -441,85 +306,47 @@
                   "format": "uuid",
                   "readOnly": true
                 },
-                "owner": {
+                "provider": {
                   "type": "string",
                   "readOnly": true
                 },
-                "requests": {
+                "default": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                },
+                "others": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "id": {
-                        "type": "integer",
-                        "readOnly": true
-                      },
-                      "token": {
+                      "address": {
                         "type": "string",
-                        "maxLength": 50
-                      },
-                      "chain": {
-                        "type": "string",
-                        "maxLength": 50
-                      },
-                      "amount": {
-                        "type": "string",
-                        "maxLength": 50
-                      },
-                      "data": {
-                        "type": "string",
-                        "maxLength": 50
-                      },
-                      "executed": {
-                        "type": "boolean"
-                      },
-                      "transaction_hash": {
-                        "type": "string",
-                        "nullable": true,
                         "maxLength": 100
                       },
-                      "same_chain": {
-                        "type": "boolean"
-                      },
-                      "dst_transaction_hash": {
-                        "type": "string",
-                        "nullable": true,
-                        "maxLength": 100
-                      },
-                      "message": {
-                        "type": "string",
-                        "maxLength": 50
-                      },
-                      "label": {
-                        "type": "string",
-                        "maxLength": 50
-                      },
-                      "created_at": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "updated_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true
-                      },
-                      "from_id": {
-                        "type": "string"
+                      "network": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
                       }
                     },
                     "required": [
-                      "token",
-                      "chain",
-                      "amount",
-                      "data",
-                      "message",
-                      "label",
-                      "from_id"
+                      "address",
+                      "network"
                     ]
                   }
-                },
-                "provider": {
-                  "type": "string"
                 },
                 "wagpay_id": {
                   "type": "string",
@@ -529,19 +356,13 @@
                   "type": "string",
                   "maxLength": 50
                 },
-                "default": {
-                  "type": "object"
-                },
-                "others": {
-                  "type": "object"
-                },
-                "forced_same_chain_payment": {
+                "assume_high_security": {
                   "type": "boolean"
                 },
-                "phone_number": {
+                "arweave_commit_hash": {
                   "type": "string",
                   "nullable": true,
-                  "maxLength": 13
+                  "maxLength": 257
                 },
                 "synced_at": {
                   "type": "string",
@@ -559,11 +380,10 @@
                 }
               },
               "required": [
-                "provider",
-                "wagpay_id",
-                "identifier",
                 "default",
-                "others"
+                "others",
+                "wagpay_id",
+                "identifier"
               ]
             }
           }
@@ -578,32 +398,23 @@
     "path": "/id/{id}/",
     "jsonRequestBodyExample": {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "owner": "string",
-      "requests": [
+      "provider": "string",
+      "default": {
+        "address": "string",
+        "network": 0
+      },
+      "others": [
         {
-          "id": 0,
-          "token": "string",
-          "chain": "string",
-          "amount": "string",
-          "data": "string",
-          "executed": true,
-          "transaction_hash": "string",
-          "same_chain": true,
-          "dst_transaction_hash": "string",
-          "message": "string",
-          "label": "string",
-          "created_at": "string",
-          "updated_at": "string",
-          "from_id": "string"
+          "address": "string",
+          "network": [
+            0
+          ]
         }
       ],
-      "provider": "string",
       "wagpay_id": "string",
       "identifier": "string",
-      "default": {},
-      "others": {},
-      "forced_same_chain_payment": true,
-      "phone_number": "string",
+      "assume_high_security": true,
+      "arweave_commit_hash": "string",
       "synced_at": "string",
       "created_at": "string",
       "updated_at": "string"
@@ -663,8 +474,16 @@
               "content": "",
               "type": "text/plain"
             },
-            "key": "default",
-            "value": "<object>"
+            "key": "required",
+            "value": "[\"address\",\"network\"]"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "properties",
+            "value": "{\"address\":{\"type\":\"string\",\"maxLength\":100,\"default\":\"<string>\"},\"network\":{\"type\":\"integer\",\"default\":\"<integer>\"}}"
           }
         ]
       }
@@ -674,8 +493,8 @@
   "sourceDirName": ".",
   "permalink": "/api/partial-update-id",
   "previous": {
-    "title": "Update FetcchX ID",
-    "permalink": "/api/update-fetcch-x-id"
+    "title": "updateID",
+    "permalink": "/api/update-id"
   },
   "next": {
     "title": "destroyID",

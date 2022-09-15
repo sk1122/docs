@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Get Payment Requests
 
-### Sent to a user
+### User's received payment requests
 
 ```js
 
@@ -12,7 +12,9 @@ import { getPaymentRequests } from "@fetcch/id"
 
 getPaymentRequests({
     apiKey: "YOUR_API_KEY",
-    toId: "satyam@wagpay"
+    data: {
+        signedMsg: "0x0000"
+    }
 })
     .then(result => {
         console.log(result)
@@ -23,7 +25,7 @@ getPaymentRequests({
 
 ```
 
-### Sent from a user
+### User's sent payment requests
 
 ```js
 
@@ -31,7 +33,10 @@ import { getPaymentRequests } from "@fetcch/id"
 
 getPaymentRequests({
     apiKey: "YOUR_API_KEY",
-    toId: "satyam@metamask"
+    data: {
+        my: true,
+        signedMsg: ""
+    }
 })
     .then(result => {
         console.log(result)
@@ -41,3 +46,24 @@ getPaymentRequests({
     })
 
 ```
+
+### Single payment request
+
+```js
+import { getPaymentRequests } from "@fetcch/id"
+
+getPaymentRequests({
+    apiKey: "PROVIDER_API_KEY",
+    data: {
+        id: 1001
+    }
+})
+    .then(result => {
+        console.log(result)
+    })
+    .catch(error => {
+        console.error(error)
+    })
+```
+
+Note - For websocket connection with requests, go on to API Docs

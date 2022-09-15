@@ -2,7 +2,7 @@
   "unversionedId": "fetcch-x/sdk/get-payment-requests",
   "id": "fetcch-x/sdk/get-payment-requests",
   "title": "Get Payment Requests",
-  "description": "Sent to a user",
+  "description": "User's received payment requests",
   "source": "@site/docs/fetcch-x/sdk/get-payment-requests.md",
   "sourceDirName": "fetcch-x/sdk",
   "slug": "/fetcch-x/sdk/get-payment-requests",
@@ -17,8 +17,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create ID",
-    "permalink": "/docs/fetcch-x/sdk/create-id"
+    "title": "Update ID Config",
+    "permalink": "/docs/fetcch-x/sdk/update-id-config"
   },
   "next": {
     "title": "Create Payment Requests",

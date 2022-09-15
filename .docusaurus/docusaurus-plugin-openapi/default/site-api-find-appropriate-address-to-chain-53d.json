@@ -1,0 +1,151 @@
+{
+  "type": "api",
+  "id": "find-appropriate-address-to-chain",
+  "unversionedId": "find-appropriate-address-to-chain",
+  "title": "Find appropriate address to chain",
+  "description": "",
+  "slug": "/find-appropriate-address-to-chain",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Find appropriate address to chain",
+    "description": "",
+    "parameters": [],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "provider": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "default": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                },
+                "others": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "maxLength": 100
+                      },
+                      "network": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "network"
+                    ]
+                  }
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "assume_high_security": {
+                  "type": "boolean"
+                },
+                "arweave_commit_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 257
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "default",
+                "others",
+                "wagpay_id",
+                "identifier"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "ID"
+    ],
+    "method": "get",
+    "path": "/id/find_address/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "Find appropriate address to chain",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          "find_address",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/find-appropriate-address-to-chain",
+  "previous": {
+    "title": "Create ID",
+    "permalink": "/api/create-id"
+  },
+  "next": {
+    "title": "Get ID",
+    "permalink": "/api/get-id"
+  }
+}

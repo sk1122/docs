@@ -9,27 +9,233 @@
   "api": {
     "operationId": "Create Payment Request",
     "description": "",
-    "parameters": [
-      {
-        "name": "X-API-KEY",
-        "required": true,
-        "in": "header",
-        "description": "Your FetcchX Provider API Key",
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
+    "parameters": [],
     "requestBody": {
       "content": {
-        "application/json": {
-          "schema": {}
-        },
         "application/x-www-form-urlencoded": {
-          "schema": {}
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
         },
         "multipart/form-data": {
-          "schema": {}
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
+        },
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "readOnly": true
+              },
+              "token": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "amount": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "data": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 50
+              },
+              "executed": {
+                "type": "boolean"
+              },
+              "transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "same_chain": {
+                "type": "boolean"
+              },
+              "dst_transaction_hash": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 100
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 50
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "from_id": {
+                "type": "string"
+              },
+              "to_id": {
+                "type": "string"
+              },
+              "chain": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "token",
+              "amount",
+              "message",
+              "label",
+              "from_id",
+              "to_id",
+              "chain"
+            ]
+          }
         }
       }
     },
@@ -37,7 +243,79 @@
       "201": {
         "content": {
           "application/json": {
-            "schema": {}
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "readOnly": true
+                },
+                "token": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "amount": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "data": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 50
+                },
+                "executed": {
+                  "type": "boolean"
+                },
+                "transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "same_chain": {
+                  "type": "boolean"
+                },
+                "dst_transaction_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 100
+                },
+                "message": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "label": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                },
+                "from_id": {
+                  "type": "string"
+                },
+                "to_id": {
+                  "type": "string"
+                },
+                "chain": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "token",
+                "amount",
+                "message",
+                "label",
+                "from_id",
+                "to_id",
+                "chain"
+              ]
+            }
           }
         },
         "description": ""
@@ -47,10 +325,27 @@
       "Payment Requests"
     ],
     "method": "post",
-    "path": "/Payment Requests/",
+    "path": "/requests/",
+    "jsonRequestBodyExample": {
+      "id": 0,
+      "token": "string",
+      "amount": "string",
+      "data": "string",
+      "executed": true,
+      "transaction_hash": "string",
+      "same_chain": true,
+      "dst_transaction_hash": "string",
+      "message": "string",
+      "label": "string",
+      "created_at": "string",
+      "updated_at": "string",
+      "from_id": "string",
+      "to_id": "string",
+      "chain": 0
+    },
     "info": {
-      "title": "FetcchX ID",
-      "version": "v0.1"
+      "title": "",
+      "version": ""
     },
     "postman": {
       "name": "Create Payment Request",
@@ -60,7 +355,7 @@
       },
       "url": {
         "path": [
-          "Payment Requests",
+          "requests",
           ""
         ],
         "host": [
@@ -70,14 +365,6 @@
         "variable": []
       },
       "header": [
-        {
-          "description": {
-            "content": "(Required) Your FetcchX Provider API Key",
-            "type": "text/plain"
-          },
-          "key": "X-API-KEY",
-          "value": "<string>"
-        },
         {
           "key": "Content-Type",
           "value": "application/x-www-form-urlencoded"
@@ -89,195 +376,107 @@
         "urlencoded": [
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "0",
-            "value": "s"
+            "key": "token",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "1",
-            "value": "c"
+            "key": "amount",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "2",
-            "value": "h"
+            "key": "message",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "3",
-            "value": "e"
+            "key": "label",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "4",
-            "value": "m"
+            "key": "from_id",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "5",
-            "value": "a"
+            "key": "to_id",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "6",
-            "value": " "
+            "key": "chain",
+            "value": "<integer>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "7",
-            "value": "t"
+            "key": "data",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "8",
-            "value": "y"
+            "key": "executed",
+            "value": "<boolean>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "9",
-            "value": "p"
+            "key": "transaction_hash",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "10",
-            "value": "e"
+            "key": "same_chain",
+            "value": "<boolean>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "11",
-            "value": " "
+            "key": "dst_transaction_hash",
+            "value": "<string>"
           },
           {
             "description": {
-              "content": "undefined",
+              "content": "",
               "type": "text/plain"
             },
-            "key": "12",
-            "value": "n"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "13",
-            "value": "o"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "14",
-            "value": "t"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "15",
-            "value": " "
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "16",
-            "value": "p"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "17",
-            "value": "r"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "18",
-            "value": "o"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "19",
-            "value": "v"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "20",
-            "value": "i"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "21",
-            "value": "d"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "22",
-            "value": "e"
-          },
-          {
-            "description": {
-              "content": "undefined",
-              "type": "text/plain"
-            },
-            "key": "23",
-            "value": "d"
+            "key": "created_at",
+            "value": "<dateTime>"
           }
         ]
       }
@@ -287,11 +486,11 @@
   "sourceDirName": ".",
   "permalink": "/api/create-payment-request",
   "previous": {
-    "title": "Get Payment Requests",
-    "permalink": "/api/get-payment-requests"
+    "title": "Get Requests",
+    "permalink": "/api/get-requests"
   },
   "next": {
-    "title": "Get Payment Payment Requests sent by a user",
-    "permalink": "/api/get-payment-payment-requests-sent-by-a-user"
+    "title": "Get Request from id",
+    "permalink": "/api/get-request-from-id"
   }
 }

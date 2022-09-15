@@ -99,17 +99,29 @@ export default [
   },
   {
     path: '/api',
-    component: ComponentCreator('/api', 'e48'),
+    component: ComponentCreator('/api', '7db'),
     routes: [
       {
         path: '/api',
-        component: ComponentCreator('/api', '0ef'),
+        component: ComponentCreator('/api', '35a'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/create-fetcch-x-id',
-        component: ComponentCreator('/api/create-fetcch-x-id', 'a71'),
+        path: '/api/change-default-address',
+        component: ComponentCreator('/api/change-default-address', 'a33'),
+        exact: true,
+        sidebar: "openapi-sidebar-default"
+      },
+      {
+        path: '/api/change-other-addresses',
+        component: ComponentCreator('/api/change-other-addresses', 'fa5'),
+        exact: true,
+        sidebar: "openapi-sidebar-default"
+      },
+      {
+        path: '/api/create-id',
+        component: ComponentCreator('/api/create-id', '0ee'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
@@ -120,44 +132,50 @@ export default [
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/destroy-fetcch-x-id',
-        component: ComponentCreator('/api/destroy-fetcch-x-id', '0fd'),
+        path: '/api/find-appropriate-address-to-chain',
+        component: ComponentCreator('/api/find-appropriate-address-to-chain', '4b8'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/get-payment-payment-requests-sent-by-a-user',
-        component: ComponentCreator('/api/get-payment-payment-requests-sent-by-a-user', 'a58'),
+        path: '/api/get-id',
+        component: ComponentCreator('/api/get-id', '211'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/get-payment-requests',
-        component: ComponentCreator('/api/get-payment-requests', '517'),
+        path: '/api/get-id-config',
+        component: ComponentCreator('/api/get-id-config', '613'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/list-fetcch-x-i-ds',
-        component: ComponentCreator('/api/list-fetcch-x-i-ds', 'e9e'),
+        path: '/api/get-request-from-id',
+        component: ComponentCreator('/api/get-request-from-id', 'fe3'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/partial-update-fetcch-x-id',
-        component: ComponentCreator('/api/partial-update-fetcch-x-id', '609'),
+        path: '/api/get-requests',
+        component: ComponentCreator('/api/get-requests', '255'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/retreive-single-fetcch-x-id',
-        component: ComponentCreator('/api/retreive-single-fetcch-x-id', '4ba'),
+        path: '/api/update-id',
+        component: ComponentCreator('/api/update-id', 'f79'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       },
       {
-        path: '/api/update-fetcch-x-id',
-        component: ComponentCreator('/api/update-fetcch-x-id', 'e4a'),
+        path: '/api/update-id-config',
+        component: ComponentCreator('/api/update-id-config', 'c3f'),
+        exact: true,
+        sidebar: "openapi-sidebar-default"
+      },
+      {
+        path: '/api/update-payment-request',
+        component: ComponentCreator('/api/update-payment-request', '042'),
         exact: true,
         sidebar: "openapi-sidebar-default"
       }
@@ -165,7 +183,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'b63'),
+    component: ComponentCreator('/docs', '3ce'),
     routes: [
       {
         path: '/docs/category/fetcch-bridge',
@@ -246,6 +264,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/fetcch-x/sdk/get-id-config',
+        component: ComponentCreator('/docs/fetcch-x/sdk/get-id-config', 'cb9'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/fetcch-x/sdk/get-payment-requests',
         component: ComponentCreator('/docs/fetcch-x/sdk/get-payment-requests', '6c6'),
         exact: true,
@@ -254,6 +278,18 @@ export default [
       {
         path: '/docs/fetcch-x/sdk/installation',
         component: ComponentCreator('/docs/fetcch-x/sdk/installation', '716'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/fetcch-x/sdk/pay',
+        component: ComponentCreator('/docs/fetcch-x/sdk/pay', '9a5'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/fetcch-x/sdk/update-id-config',
+        component: ComponentCreator('/docs/fetcch-x/sdk/update-id-config', 'aba'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

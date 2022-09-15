@@ -186,54 +186,66 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/api-e48": {
+  "/api-7db": {
     "__comp": "__comp---theme-api-pageac-3-ebb",
     "__context": {
       "plugin": "plugin---api-378-d6c"
     },
     "apiMetadata": "apiMetadata---apib-52-345"
   },
-  "/api-0ef": {
+  "/api-35a": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-7-e-3-537"
+    "content": "content---apid-78-c5d"
   },
-  "/api/create-fetcch-x-id-a71": {
+  "/api/change-default-address-a33": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-create-fetcch-x-ideea-9e2"
+    "content": "content---api-change-default-address-936-bd5"
+  },
+  "/api/change-other-addresses-fa5": {
+    "__comp": "__comp---theme-api-item-4-c-5-a29",
+    "content": "content---api-change-other-addresses-9-c-0-662"
+  },
+  "/api/create-id-0ee": {
+    "__comp": "__comp---theme-api-item-4-c-5-a29",
+    "content": "content---api-create-id-874-801"
   },
   "/api/create-payment-request-6b2": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
     "content": "content---api-create-payment-request-623-48e"
   },
-  "/api/destroy-fetcch-x-id-0fd": {
+  "/api/find-appropriate-address-to-chain-4b8": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-destroy-fetcch-x-id-195-7f3"
+    "content": "content---api-find-appropriate-address-to-chain-999-d8d"
   },
-  "/api/get-payment-payment-requests-sent-by-a-user-a58": {
+  "/api/get-id-211": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-get-payment-payment-requests-sent-by-a-user-811-ae3"
+    "content": "content---api-get-idd-63-e25"
   },
-  "/api/get-payment-requests-517": {
+  "/api/get-id-config-613": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-get-payment-requests-3-da-824"
+    "content": "content---apid-78-c5d"
   },
-  "/api/list-fetcch-x-i-ds-e9e": {
+  "/api/get-request-from-id-fe3": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-7-e-3-537"
+    "content": "content---api-get-request-from-ida-17-da6"
   },
-  "/api/partial-update-fetcch-x-id-609": {
+  "/api/get-requests-255": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-partial-update-fetcch-x-id-560-0a5"
+    "content": "content---api-get-requests-31-f-51d"
   },
-  "/api/retreive-single-fetcch-x-id-4ba": {
+  "/api/update-id-f79": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-retreive-single-fetcch-x-idc-86-78f"
+    "content": "content---api-update-id-646-fbf"
   },
-  "/api/update-fetcch-x-id-e4a": {
+  "/api/update-id-config-c3f": {
     "__comp": "__comp---theme-api-item-4-c-5-a29",
-    "content": "content---api-update-fetcch-x-id-8-bf-193"
+    "content": "content---api-update-id-configc-08-cd9"
   },
-  "/docs-b63": {
+  "/api/update-payment-request-042": {
+    "__comp": "__comp---theme-api-item-4-c-5-a29",
+    "content": "content---api-update-payment-request-5-e-0-42c"
+  },
+  "/docs-3ce": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-613-c36"
@@ -292,6 +304,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-get-id-0-ab-6c9"
   },
+  "/docs/fetcch-x/sdk/get-id-config-cb9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-get-id-config-007-f24"
+  },
   "/docs/fetcch-x/sdk/get-payment-requests-6c6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-get-payment-requests-369-30c"
@@ -299,6 +315,14 @@
   "/docs/fetcch-x/sdk/installation-716": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-installation-999-beb"
+  },
+  "/docs/fetcch-x/sdk/pay-9a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-paye-40-d4f"
+  },
+  "/docs/fetcch-x/sdk/update-id-config-aba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-update-id-config-140-1d7"
   },
   "/docs/intro-aed": {
     "__comp": "__comp---theme-doc-item-178-a40",

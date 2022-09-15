@@ -18,81 +18,10 @@
         "schema": {
           "type": "string"
         }
-      },
-      {
-        "name": "X-API-KEY",
-        "required": true,
-        "in": "header",
-        "description": "Your FetcchX Provider API Key",
-        "schema": {
-          "type": "string"
-        }
       }
     ],
     "requestBody": {
       "content": {
-        "application/json": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uuid",
-                "readOnly": true
-              },
-              "first_name": {
-                "type": "string",
-                "nullable": true,
-                "maxLength": 120
-              },
-              "last_name": {
-                "type": "string",
-                "nullable": true,
-                "maxLength": 120
-              },
-              "wagpay_id": {
-                "type": "string",
-                "nullable": true
-              },
-              "email": {
-                "type": "string",
-                "format": "email",
-                "maxLength": 254
-              },
-              "password": {
-                "type": "string",
-                "writeOnly": true
-              },
-              "profile_picture": {
-                "type": "string",
-                "nullable": true,
-                "maxLength": 240
-              },
-              "birth_date": {
-                "type": "string",
-                "format": "date",
-                "nullable": true
-              },
-              "is_onboarded": {
-                "type": "boolean"
-              },
-              "created_at": {
-                "type": "string",
-                "format": "date",
-                "readOnly": true
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date",
-                "readOnly": true
-              }
-            },
-            "required": [
-              "email",
-              "password"
-            ]
-          }
-        },
         "application/x-www-form-urlencoded": {
           "schema": {
             "type": "object",
@@ -156,6 +85,68 @@
           }
         },
         "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "first_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "last_name": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 120
+              },
+              "wagpay_id": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "maxLength": 254
+              },
+              "password": {
+                "type": "string",
+                "writeOnly": true
+              },
+              "profile_picture": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 240
+              },
+              "birth_date": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "is_onboarded": {
+                "type": "boolean"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ]
+          }
+        },
+        "application/json": {
           "schema": {
             "type": "object",
             "properties": {
@@ -301,14 +292,14 @@
       "email": "user@example.com",
       "password": "string",
       "profile_picture": "string",
-      "birth_date": "2022-09-09",
+      "birth_date": "2022-09-15",
       "is_onboarded": true,
-      "created_at": "2022-09-09",
-      "updated_at": "2022-09-09"
+      "created_at": "2022-09-15",
+      "updated_at": "2022-09-15"
     },
     "info": {
-      "title": "FetcchX ID",
-      "version": "v0.1"
+      "title": "",
+      "version": ""
     },
     "postman": {
       "name": "update User",
@@ -339,14 +330,6 @@
         ]
       },
       "header": [
-        {
-          "description": {
-            "content": "(Required) Your FetcchX Provider API Key",
-            "type": "text/plain"
-          },
-          "key": "X-API-KEY",
-          "value": "<string>"
-        },
         {
           "key": "Content-Type",
           "value": "application/x-www-form-urlencoded"

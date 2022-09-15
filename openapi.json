@@ -1,15 +1,258 @@
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "FetcchX ID",
-        "version": "v0.1"
+        "title": "",
+        "version": ""
     },
     "paths": {
-        "/id/": {
+        "/id/config/{id}/": {
             "get": {
-                "operationId": "List FetcchX IDs",
-                "description": "List FetcchX IDs",
+                "operationId": "Get ID Config",
+                "description": "",
                 "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/IDConfig"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID Config"
+                ]
+            },
+            "put": {
+                "operationId": "Update ID Config",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IDConfig"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IDConfig"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IDConfig"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/IDConfig"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID Config"
+                ]
+            }
+        },
+        "/id/": {
+            "post": {
+                "operationId": "Create ID",
+                "description": "",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            }
+        },
+        "/id/find_address/": {
+            "get": {
+                "operationId": "Find appropriate address to chain",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            }
+        },
+        "/id/{id}/": {
+            "get": {
+                "operationId": "Get ID",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            },
+            "put": {
+                "operationId": "Update ID",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ID"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            }
+        },
+        "/requests/": {
+            "get": {
+                "operationId": "Get Requests",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "my",
+                        "required": false,
+                        "in": "query",
+                        "description": "My Requests",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "signed_msg",
+                        "required": false,
+                        "in": "query",
+                        "description": "A Valid ECDSA Signature",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
                     {
                         "name": "page",
                         "required": false,
@@ -17,15 +260,6 @@
                         "description": "A page number within the paginated result set.",
                         "schema": {
                             "type": "integer"
-                        }
-                    },
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
                         }
                     }
                 ],
@@ -55,326 +289,10 @@
                                         "results": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/components/schemas/ID"
+                                                "$ref": "#/components/schemas/Requests"
                                             }
                                         }
                                     }
-                                }
-                            }
-                        },
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            },
-            "post": {
-                "operationId": "Create FetcchX ID",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ID"
-                                }
-                            }
-                        },
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            }
-        },
-        "/id/{id}/": {
-            "get": {
-                "operationId": "Retreive Single FetcchX ID",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ID"
-                                }
-                            }
-                        },
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            },
-            "put": {
-                "operationId": "Update FetcchX ID",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ID"
-                                }
-                            }
-                        },
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            },
-            "patch": {
-                "operationId": "Partial Update FetcchX ID",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        },
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ID"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ID"
-                                }
-                            }
-                        },
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            },
-            "delete": {
-                "operationId": "Destroy FetcchX ID",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "204": {
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "FetcchX ID"
-                ]
-            }
-        },
-        "/Payment Requests/": {
-            "get": {
-                "operationId": "Get Payment Requests",
-                "description": "",
-                "parameters": [
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {}
                                 }
                             }
                         },
@@ -388,27 +306,23 @@
             "post": {
                 "operationId": "Create Payment Request",
                 "description": "",
-                "parameters": [
-                    {
-                        "name": "X-API-KEY",
-                        "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
+                "parameters": [],
                 "requestBody": {
                     "content": {
-                        "application/json": {
-                            "schema": {}
-                        },
                         "application/x-www-form-urlencoded": {
-                            "schema": {}
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
                         },
                         "multipart/form-data": {
-                            "schema": {}
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
                         }
                     }
                 },
@@ -416,7 +330,9 @@
                     "201": {
                         "content": {
                             "application/json": {
-                                "schema": {}
+                                "schema": {
+                                    "$ref": "#/components/schemas/Requests"
+                                }
                             }
                         },
                         "description": ""
@@ -427,25 +343,16 @@
                 ]
             }
         },
-        "/Payment Requests/my/": {
+        "/requests/{id}/": {
             "get": {
-                "operationId": "Get Payment Payment Requests sent by a user",
+                "operationId": "Get Request from id",
                 "description": "",
                 "parameters": [
                     {
-                        "name": "X-API-KEY",
+                        "name": "id",
+                        "in": "path",
                         "required": true,
-                        "in": "header",
-                        "description": "Your FetcchX Provider API Key",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "signed_msg",
-                        "required": true,
-                        "in": "query",
-                        "description": "A Valid ECDSA Signature",
+                        "description": "",
                         "schema": {
                             "type": "string"
                         }
@@ -455,7 +362,58 @@
                     "200": {
                         "content": {
                             "application/json": {
-                                "schema": {}
+                                "schema": {
+                                    "$ref": "#/components/schemas/Requests"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Payment Requests"
+                ]
+            },
+            "put": {
+                "operationId": "Update Payment Request",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Requests"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Requests"
+                                }
                             }
                         },
                         "description": ""
@@ -465,11 +423,121 @@
                     "Payment Requests"
                 ]
             }
+        },
+        "/id/change_default/": {
+            "put": {
+                "operationId": "Change Default Address",
+                "description": "",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DefaultAddress"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DefaultAddress"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DefaultAddress"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            }
+        },
+        "/id/change_others/": {
+            "put": {
+                "operationId": "Change Other Addresses",
+                "description": "",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OtherAddresses"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OtherAddresses"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OtherAddresses"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ID"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "ID"
+                ]
+            }
         }
     },
     "components": {
         "schemas": {
-            "ID": {
+            "DefaultAddress": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "network": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "OtherAddresses": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "address": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "network": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "IDConfig": {
                 "type": "object",
                 "properties": {
                     "id": {
@@ -477,8 +545,67 @@
                         "format": "uuid",
                         "readOnly": true
                     },
-                    "owner": {
-                        "type": "string",
+                    "forced_same_chain_payment": {
+                        "type": "boolean"
+                    },
+                    "wagpay_id": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "readOnly": true
+                            },
+                            "wagpay_id": {
+                                "type": "string",
+                                "maxLength": 50
+                            },
+                            "identifier": {
+                                "type": "string",
+                                "maxLength": 50
+                            },
+                            "assume_high_security": {
+                                "type": "boolean"
+                            },
+                            "arweave_commit_hash": {
+                                "type": "string",
+                                "nullable": true,
+                                "maxLength": 257
+                            },
+                            "synced_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "nullable": true
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "format": "date-time"
+                            },
+                            "updated_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "readOnly": true
+                            },
+                            "provider": {
+                                "type": "string"
+                            },
+                            "default": {
+                                "type": "string"
+                            },
+                            "others": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "wagpay_id",
+                            "identifier",
+                            "provider",
+                            "default",
+                            "others"
+                        ],
                         "readOnly": true
                     },
                     "requests": {
@@ -494,16 +621,13 @@
                                     "type": "string",
                                     "maxLength": 50
                                 },
-                                "chain": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
                                 "amount": {
                                     "type": "string",
                                     "maxLength": 50
                                 },
                                 "data": {
                                     "type": "string",
+                                    "nullable": true,
                                     "maxLength": 50
                                 },
                                 "executed": {
@@ -541,21 +665,77 @@
                                 },
                                 "from_id": {
                                     "type": "string"
+                                },
+                                "to_id": {
+                                    "type": "string"
+                                },
+                                "chain": {
+                                    "type": "integer"
                                 }
                             },
                             "required": [
                                 "token",
-                                "chain",
                                 "amount",
-                                "data",
                                 "message",
                                 "label",
-                                "from_id"
+                                "from_id",
+                                "to_id",
+                                "chain"
                             ]
-                        }
+                        },
+                        "readOnly": true
+                    }
+                }
+            },
+            "ID": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "readOnly": true
                     },
                     "provider": {
-                        "type": "string"
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "default": {
+                        "type": "object",
+                        "properties": {
+                            "address": {
+                                "type": "string",
+                                "maxLength": 100
+                            },
+                            "network": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "address",
+                            "network"
+                        ]
+                    },
+                    "others": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "address": {
+                                    "type": "string",
+                                    "maxLength": 100
+                                },
+                                "network": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "address",
+                                "network"
+                            ]
+                        }
                     },
                     "wagpay_id": {
                         "type": "string",
@@ -565,19 +745,13 @@
                         "type": "string",
                         "maxLength": 50
                     },
-                    "default": {
-                        "type": "object"
-                    },
-                    "others": {
-                        "type": "object"
-                    },
-                    "forced_same_chain_payment": {
+                    "assume_high_security": {
                         "type": "boolean"
                     },
-                    "phone_number": {
+                    "arweave_commit_hash": {
                         "type": "string",
                         "nullable": true,
-                        "maxLength": 13
+                        "maxLength": 257
                     },
                     "synced_at": {
                         "type": "string",
@@ -595,11 +769,83 @@
                     }
                 },
                 "required": [
-                    "provider",
-                    "wagpay_id",
-                    "identifier",
                     "default",
-                    "others"
+                    "others",
+                    "wagpay_id",
+                    "identifier"
+                ]
+            },
+            "Requests": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "readOnly": true
+                    },
+                    "token": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "amount": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 50
+                    },
+                    "executed": {
+                        "type": "boolean"
+                    },
+                    "transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                    },
+                    "same_chain": {
+                        "type": "boolean"
+                    },
+                    "dst_transaction_hash": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 100
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "label": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "from_id": {
+                        "type": "string"
+                    },
+                    "to_id": {
+                        "type": "string"
+                    },
+                    "chain": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "token",
+                    "amount",
+                    "message",
+                    "label",
+                    "from_id",
+                    "to_id",
+                    "chain"
                 ]
             },
             "User": {

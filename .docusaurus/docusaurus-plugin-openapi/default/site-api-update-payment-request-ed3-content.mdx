@@ -1,0 +1,59 @@
+# Update Payment Request
+
+<table style={{"display":"table","width":"100%"}}><thead><tr><th style={{"textAlign":"left"}}>Path Parameters</th></tr></thead><tbody><tr><td><code>id</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr></tbody></table><table style={{"display":"table","width":"100%"}}><thead><tr><th style={{"textAlign":"left"}}>Request Body <div></div></th></tr></thead><tbody><tr><td><code>id</code><span style={{"opacity":"0.6"}}> integer</span></td></tr><tr><td><code>token</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>amount</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>data</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>executed</code><span style={{"opacity":"0.6"}}> boolean</span></td></tr><tr><td><code>transaction_hash</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 100
+
+</div></td></tr><tr><td><code>same_chain</code><span style={{"opacity":"0.6"}}> boolean</span></td></tr><tr><td><code>dst_transaction_hash</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 100
+
+</div></td></tr><tr><td><code>message</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>label</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>created_at</code><span style={{"opacity":"0.6"}}> date-time</span></td></tr><tr><td><code>updated_at</code><span style={{"opacity":"0.6"}}> date-time</span></td></tr><tr><td><code>from_id</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr><tr><td><code>to_id</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr><tr><td><code>chain</code><span style={{"opacity":"0.6"}}> integer</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr></tbody></table><table style={{"display":"table","width":"100%"}}><thead><tr><th style={{"textAlign":"left"}}>Responses</th></tr></thead><tbody><tr><td><div style={{"display":"flex"}}><div style={{"marginRight":"var(--ifm-table-cell-padding)"}}><code>200</code></div><div></div></div><div><table style={{"display":"table","width":"100%","marginTop":"var(--ifm-table-cell-padding)","marginBottom":"0px"}}><thead><tr><th style={{"textAlign":"left"}}>Schema <div></div></th></tr></thead><tbody><tr><td><code>id</code><span style={{"opacity":"0.6"}}> integer</span></td></tr><tr><td><code>token</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>amount</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>data</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>executed</code><span style={{"opacity":"0.6"}}> boolean</span></td></tr><tr><td><code>transaction_hash</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 100
+
+</div></td></tr><tr><td><code>same_chain</code><span style={{"opacity":"0.6"}}> boolean</span></td></tr><tr><td><code>dst_transaction_hash</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 100
+
+</div></td></tr><tr><td><code>message</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>label</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** length ≤ 50
+
+</div></td></tr><tr><td><code>created_at</code><span style={{"opacity":"0.6"}}> date-time</span></td></tr><tr><td><code>updated_at</code><span style={{"opacity":"0.6"}}> date-time</span></td></tr><tr><td><code>from_id</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr><tr><td><code>to_id</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr><tr><td><code>chain</code><span style={{"opacity":"0.6"}}> integer</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong></td></tr></tbody></table></div></td></tr></tbody></table>

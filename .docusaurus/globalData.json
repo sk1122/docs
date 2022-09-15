@@ -51,6 +51,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "fetcch-x/sdk/get-id-config",
+              "path": "/docs/fetcch-x/sdk/get-id-config",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "fetcch-x/sdk/get-payment-requests",
               "path": "/docs/fetcch-x/sdk/get-payment-requests",
               "sidebar": "tutorialSidebar"
@@ -58,6 +63,16 @@
             {
               "id": "fetcch-x/sdk/installation",
               "path": "/docs/fetcch-x/sdk/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/pay",
+              "path": "/docs/fetcch-x/sdk/pay",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "fetcch-x/sdk/update-id-config",
+              "path": "/docs/fetcch-x/sdk/update-id-config",
               "sidebar": "tutorialSidebar"
             },
             {

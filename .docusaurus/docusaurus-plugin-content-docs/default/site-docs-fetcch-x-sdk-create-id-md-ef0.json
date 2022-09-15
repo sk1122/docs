@@ -21,7 +21,7 @@
     "permalink": "/docs/fetcch-x/sdk/get-id"
   },
   "next": {
-    "title": "Get Payment Requests",
-    "permalink": "/docs/fetcch-x/sdk/get-payment-requests"
+    "title": "Get ID Config",
+    "permalink": "/docs/fetcch-x/sdk/get-id-config"
   }
 }

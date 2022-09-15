@@ -89,6 +89,18 @@
               },
               {
                 "type": "link",
+                "label": "Get ID Config",
+                "href": "/docs/fetcch-x/sdk/get-id-config",
+                "docId": "fetcch-x/sdk/get-id-config"
+              },
+              {
+                "type": "link",
+                "label": "Update ID Config",
+                "href": "/docs/fetcch-x/sdk/update-id-config",
+                "docId": "fetcch-x/sdk/update-id-config"
+              },
+              {
+                "type": "link",
                 "label": "Get Payment Requests",
                 "href": "/docs/fetcch-x/sdk/get-payment-requests",
                 "docId": "fetcch-x/sdk/get-payment-requests"
@@ -98,6 +110,12 @@
                 "label": "Create Payment Requests",
                 "href": "/docs/fetcch-x/sdk/create-payment-requests",
                 "docId": "fetcch-x/sdk/create-payment-requests"
+              },
+              {
+                "type": "link",
+                "label": "Pay",
+                "href": "/docs/fetcch-x/sdk/pay",
+                "docId": "fetcch-x/sdk/pay"
               }
             ],
             "href": "/docs/category/sdk-1"
@@ -177,16 +195,34 @@
       "description": "Get ID Data from ID",
       "sidebar": "tutorialSidebar"
     },
+    "fetcch-x/sdk/get-id-config": {
+      "id": "fetcch-x/sdk/get-id-config",
+      "title": "Get ID Config",
+      "description": "We've divided ID into 2 parts",
+      "sidebar": "tutorialSidebar"
+    },
     "fetcch-x/sdk/get-payment-requests": {
       "id": "fetcch-x/sdk/get-payment-requests",
       "title": "Get Payment Requests",
-      "description": "Sent to a user",
+      "description": "User's received payment requests",
       "sidebar": "tutorialSidebar"
     },
     "fetcch-x/sdk/installation": {
       "id": "fetcch-x/sdk/installation",
       "title": "Installation",
       "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/pay": {
+      "id": "fetcch-x/sdk/pay",
+      "title": "Pay",
+      "description": "P2P payment",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/update-id-config": {
+      "id": "fetcch-x/sdk/update-id-config",
+      "title": "Update ID Config",
+      "description": "We've divided ID into 2 parts",
       "sidebar": "tutorialSidebar"
     },
     "intro": {

@@ -21,7 +21,7 @@
     "permalink": "/docs/fetcch-x/sdk/get-payment-requests"
   },
   "next": {
-    "title": "FetcchX ID API",
-    "permalink": "/docs/fetcch-x/api"
+    "title": "Pay",
+    "permalink": "/docs/fetcch-x/sdk/pay"
   }
 }

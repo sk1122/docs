@@ -1,0 +1,171 @@
+{
+  "type": "api",
+  "id": "get-id",
+  "unversionedId": "get-id",
+  "title": "Get ID",
+  "description": "",
+  "slug": "/get-id",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Get ID",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "provider": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "default": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                },
+                "others": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "maxLength": 100
+                      },
+                      "network": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "network"
+                    ]
+                  }
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "assume_high_security": {
+                  "type": "boolean"
+                },
+                "arweave_commit_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 257
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "default",
+                "others",
+                "wagpay_id",
+                "identifier"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "ID"
+    ],
+    "method": "get",
+    "path": "/id/{id}/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "Get ID",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/get-id",
+  "previous": {
+    "title": "Find appropriate address to chain",
+    "permalink": "/api/find-appropriate-address-to-chain"
+  },
+  "next": {
+    "title": "Update ID",
+    "permalink": "/api/update-id"
+  }
+}

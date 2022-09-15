@@ -1,0 +1,235 @@
+{
+  "type": "api",
+  "id": "change-other-addresses",
+  "unversionedId": "change-other-addresses",
+  "title": "Change Other Addresses",
+  "description": "",
+  "slug": "/change-other-addresses",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Change Other Addresses",
+    "description": "",
+    "parameters": [],
+    "requestBody": {
+      "content": {
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "application/json": {
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "provider": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "default": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                },
+                "others": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "maxLength": 100
+                      },
+                      "network": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "network"
+                    ]
+                  }
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "assume_high_security": {
+                  "type": "boolean"
+                },
+                "arweave_commit_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 257
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "default",
+                "others",
+                "wagpay_id",
+                "identifier"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "ID"
+    ],
+    "method": "put",
+    "path": "/id/change_others/",
+    "jsonRequestBodyExample": [
+      {}
+    ],
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "Change Other Addresses",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          "change_others",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "PUT",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "0",
+            "value": "<object>"
+          },
+          {
+            "description": {
+              "content": "undefined",
+              "type": "text/plain"
+            },
+            "key": "1",
+            "value": "<object>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/change-other-addresses",
+  "previous": {
+    "title": "Change Default Address",
+    "permalink": "/api/change-default-address"
+  }
+}

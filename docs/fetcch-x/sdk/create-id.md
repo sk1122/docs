@@ -16,17 +16,16 @@ createId({
         wagpayId: "satyam@wagpay",
         default: {
             address: "",
-            network: "1"
+            network: 1
         },
         others: [
             {
                 address: "",
-                network: ["1", "2", "3"]
+                network: [1, 2, 3]
             }
-        ],
-        forcedSameChainPayment: false
+        ]
+        signedMsg: "signature"
     },
-    signedMsg: "signature"
 })
     .then(result => {
         console.log(result)

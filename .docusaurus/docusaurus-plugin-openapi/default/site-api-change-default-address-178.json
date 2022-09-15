@@ -1,0 +1,228 @@
+{
+  "type": "api",
+  "id": "change-default-address",
+  "unversionedId": "change-default-address",
+  "title": "Change Default Address",
+  "description": "",
+  "slug": "/change-default-address",
+  "frontMatter": {},
+  "api": {
+    "operationId": "Change Default Address",
+    "description": "",
+    "parameters": [],
+    "requestBody": {
+      "content": {
+        "application/x-www-form-urlencoded": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "network": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "readOnly": true
+                },
+                "provider": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "default": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "network": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "network"
+                  ]
+                },
+                "others": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "maxLength": 100
+                      },
+                      "network": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "network"
+                    ]
+                  }
+                },
+                "wagpay_id": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "identifier": {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                "assume_high_security": {
+                  "type": "boolean"
+                },
+                "arweave_commit_hash": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 257
+                },
+                "synced_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "readOnly": true
+                }
+              },
+              "required": [
+                "default",
+                "others",
+                "wagpay_id",
+                "identifier"
+              ]
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "tags": [
+      "ID"
+    ],
+    "method": "put",
+    "path": "/id/change_default/",
+    "jsonRequestBodyExample": {
+      "address": "string",
+      "network": 0
+    },
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "Change Default Address",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          "change_default",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "method": "PUT",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "address",
+            "value": "<string>"
+          },
+          {
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "key": "network",
+            "value": "<integer>"
+          }
+        ]
+      }
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/change-default-address",
+  "previous": {
+    "title": "Update Payment Request",
+    "permalink": "/api/update-payment-request"
+  },
+  "next": {
+    "title": "Change Other Addresses",
+    "permalink": "/api/change-other-addresses"
+  }
+}

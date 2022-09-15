@@ -1,0 +1,79 @@
+{
+  "type": "api",
+  "id": "destroy-requests",
+  "unversionedId": "destroy-requests",
+  "title": "destroyRequests",
+  "description": "",
+  "slug": "/destroy-requests",
+  "frontMatter": {},
+  "api": {
+    "operationId": "destroyRequests",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "requests"
+    ],
+    "method": "delete",
+    "path": "/requests/{id}/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "destroy Requests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "requests",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "method": "DELETE"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/destroy-requests",
+  "previous": {
+    "title": "partialUpdateRequests",
+    "permalink": "/api/partial-update-requests"
+  },
+  "next": {
+    "title": "listUsers",
+    "permalink": "/api/list-users"
+  }
+}

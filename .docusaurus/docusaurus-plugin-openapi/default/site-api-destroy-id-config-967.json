@@ -1,0 +1,80 @@
+{
+  "type": "api",
+  "id": "destroy-id-config",
+  "unversionedId": "destroy-id-config",
+  "title": "destroyIDConfig",
+  "description": "",
+  "slug": "/destroy-id-config",
+  "frontMatter": {},
+  "api": {
+    "operationId": "destroyIDConfig",
+    "description": "",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "id"
+    ],
+    "method": "delete",
+    "path": "/id/config/{id}/",
+    "info": {
+      "title": "",
+      "version": ""
+    },
+    "postman": {
+      "name": "destroy ID Config",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "id",
+          "config",
+          ":id",
+          ""
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) ",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<string>",
+            "key": "id"
+          }
+        ]
+      },
+      "method": "DELETE"
+    }
+  },
+  "source": "@site/openapi.json",
+  "sourceDirName": ".",
+  "permalink": "/api/destroy-id-config",
+  "previous": {
+    "title": "partialUpdateIDConfig",
+    "permalink": "/api/partial-update-id-config"
+  },
+  "next": {
+    "title": "listIDs",
+    "permalink": "/api/list-i-ds"
+  }
+}

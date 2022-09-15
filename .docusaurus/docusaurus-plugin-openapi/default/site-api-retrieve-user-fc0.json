@@ -18,15 +18,6 @@
         "schema": {
           "type": "string"
         }
-      },
-      {
-        "name": "X-API-KEY",
-        "required": true,
-        "in": "header",
-        "description": "Your FetcchX Provider API Key",
-        "schema": {
-          "type": "string"
-        }
       }
     ],
     "responses": {
@@ -104,8 +95,8 @@
     "method": "get",
     "path": "/users/{id}/",
     "info": {
-      "title": "FetcchX ID",
-      "version": "v0.1"
+      "title": "",
+      "version": ""
     },
     "postman": {
       "name": "retrieve User",
@@ -135,16 +126,6 @@
           }
         ]
       },
-      "header": [
-        {
-          "description": {
-            "content": "(Required) Your FetcchX Provider API Key",
-            "type": "text/plain"
-          },
-          "key": "X-API-KEY",
-          "value": "<string>"
-        }
-      ],
       "method": "GET"
     }
   },

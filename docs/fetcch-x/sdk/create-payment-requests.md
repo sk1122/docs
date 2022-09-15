@@ -16,7 +16,7 @@ createPaymentRequests({
         toId: "satyam@rainbow",
         amount: "100000000",
         token: "0x00000000000000000000",
-        chain: "2",
+        chain: 2,
         data: "0x000000000000000000",
         message: "Plis satyam pay me back"
     }

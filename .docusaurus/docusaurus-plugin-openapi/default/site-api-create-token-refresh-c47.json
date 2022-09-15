@@ -12,23 +12,6 @@
     "parameters": [],
     "requestBody": {
       "content": {
-        "application/json": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "refresh": {
-                "type": "string"
-              },
-              "access": {
-                "type": "string",
-                "readOnly": true
-              }
-            },
-            "required": [
-              "refresh"
-            ]
-          }
-        },
         "application/x-www-form-urlencoded": {
           "schema": {
             "type": "object",
@@ -47,6 +30,23 @@
           }
         },
         "multipart/form-data": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "refresh": {
+                "type": "string"
+              },
+              "access": {
+                "type": "string",
+                "readOnly": true
+              }
+            },
+            "required": [
+              "refresh"
+            ]
+          }
+        },
+        "application/json": {
           "schema": {
             "type": "object",
             "properties": {
@@ -99,8 +99,8 @@
       "access": "string"
     },
     "info": {
-      "title": "FetcchX ID",
-      "version": "v0.1"
+      "title": "",
+      "version": ""
     },
     "postman": {
       "name": "create Token Refresh",
@@ -151,7 +151,7 @@
     "permalink": "/api/create-token-obtain-pair"
   },
   "next": {
-    "title": "updateRequestsViewSet",
-    "permalink": "/api/update-requests-view-set"
+    "title": "changeDefaultID",
+    "permalink": "/api/change-default-id"
   }
 }
