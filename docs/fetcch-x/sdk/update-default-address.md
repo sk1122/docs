@@ -1,31 +1,20 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Create ID
-
-### Get ID Data from ID
+# Update default address of an ID
 
 ```js
 
-import { createId } from "@fetcch/id"
+import { updateDefaultAddress } from "@fetcch/id"
 
-createId({
+updateDefaultAddress({
     apiKey: "PROVIDER_API_KEY",
     data: {
-        wagpayId: "satyam@wagpay",
-        default: {
-            address: "",
-            network: 1
-        },
-        others: [
-            {
-                address: "",
-                network: [1, 2, 3]
-            }
-        ]
-        signedMsg: "signature"
-    },
+        address: "", // empty if don't want to update address
+        network: 2, // internal id of the network being used,
+        signedMsg: "", // signed message from IDs default address (use previous version's, if currently updating)
+    }
 })
     .then(result => {
         console.log(result)
@@ -36,7 +25,7 @@ createId({
 
 ```
 
-This function returns data of type `ID`
+This function returns data of type `ID  `
 
 ```js
 export interface DefaultAddress {

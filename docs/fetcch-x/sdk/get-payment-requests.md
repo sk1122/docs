@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 8
 ---
 
 # Get Payment Requests
@@ -67,3 +67,27 @@ getPaymentRequests({
 ```
 
 Note - For websocket connection with requests, go on to API Docs
+
+This function returns data of type `Request[]`
+
+```js
+export interface Request {
+    id?: number
+    fromId?: string | ID
+    toId: string | ID
+    token: string
+    chain: number
+    amount: string
+    data?: string
+    executed?: boolean
+    transactionHash?: string
+    sameChain?: boolean
+    fromChain?: number
+    fromToken?: string
+    dstTransactionHash?: string
+    message?: string
+    label?: string
+    createdAt?: Date
+    updatedAt?: Date
+}
+```

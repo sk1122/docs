@@ -21,7 +21,7 @@
     "permalink": "/docs/fetcch-x/sdk/get-id"
   },
   "next": {
-    "title": "Get ID Config",
-    "permalink": "/docs/fetcch-x/sdk/get-id-config"
+    "title": "Update default address of an ID",
+    "permalink": "/docs/fetcch-x/sdk/update-default-address"
   }
 }

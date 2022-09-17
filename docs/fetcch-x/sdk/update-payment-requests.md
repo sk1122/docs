@@ -1,24 +1,22 @@
 ---
-sidebar_position: 9
+sidebar_position: 10
 ---
 
-# Create Payment Requests
+# Update Payment Requests
 
 
 ```js
 
-import { createPaymentRequests } from "@fetcch/id"
+import { updatePaymentRequests } from "@fetcch/id"
 
-createPaymentRequests({
+updatePaymentRequests({
     apiKey: "YOUR_API_KEY",
     data: {
-        fromId: "satyam@metamask",
-        toId: "satyam@rainbow",
-        amount: "100000000",
-        token: "0x00000000000000000000",
-        chain: 2,
-        data: "0x000000000000000000",
-        message: "Plis satyam pay me back"
+        id: 1001
+        fromId: "satyam@wagpay", // who paid for the request
+        fromChain: 2, // internal id of from chain
+        fromToken: "", // address of token paid in
+        transactionHash: "", // transaction hash
     }
 })
     .then(result => {
@@ -29,6 +27,8 @@ createPaymentRequests({
     })
 
 ```
+
+**Note** - API will validate the transaction hash and the values associated with blockchain, if its similar, then only it payment request is marked resolved, otherwise update request is failed
 
 This function returns data of type `Request`
 

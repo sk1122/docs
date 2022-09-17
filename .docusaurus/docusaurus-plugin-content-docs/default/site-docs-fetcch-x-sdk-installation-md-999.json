@@ -2,7 +2,7 @@
   "unversionedId": "fetcch-x/sdk/installation",
   "id": "fetcch-x/sdk/installation",
   "title": "Installation",
-  "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+  "description": "You can interact with Fetcch Bridge using @fetcch/id from your JS/TS project",
   "source": "@site/docs/fetcch-x/sdk/installation.md",
   "sourceDirName": "fetcch-x/sdk",
   "slug": "/fetcch-x/sdk/installation",

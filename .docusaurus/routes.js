@@ -183,7 +183,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '3ce'),
+    component: ComponentCreator('/docs', '1e8'),
     routes: [
       {
         path: '/docs/category/fetcch-bridge',
@@ -276,6 +276,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/fetcch-x/sdk/get-supported-chains',
+        component: ComponentCreator('/docs/fetcch-x/sdk/get-supported-chains', '07e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/fetcch-x/sdk/installation',
         component: ComponentCreator('/docs/fetcch-x/sdk/installation', '716'),
         exact: true,
@@ -288,8 +294,26 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/fetcch-x/sdk/update-default-address',
+        component: ComponentCreator('/docs/fetcch-x/sdk/update-default-address', 'f90'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/fetcch-x/sdk/update-id-config',
         component: ComponentCreator('/docs/fetcch-x/sdk/update-id-config', 'aba'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/fetcch-x/sdk/update-others-address',
+        component: ComponentCreator('/docs/fetcch-x/sdk/update-others-address', '086'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/fetcch-x/sdk/update-payment-requests',
+        component: ComponentCreator('/docs/fetcch-x/sdk/update-payment-requests', '150'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

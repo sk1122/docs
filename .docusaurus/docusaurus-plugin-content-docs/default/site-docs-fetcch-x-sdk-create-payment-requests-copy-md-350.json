@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/sdk/create-payment-requests copy",
+  "id": "fetcch-x/sdk/create-payment-requests copy",
+  "title": "Create Payment Requests",
+  "description": "",
+  "source": "@site/docs/fetcch-x/sdk/create-payment-requests copy.md",
+  "sourceDirName": "fetcch-x/sdk",
+  "slug": "/fetcch-x/sdk/create-payment-requests copy",
+  "permalink": "/docs/fetcch-x/sdk/create-payment-requests copy",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/create-payment-requests copy.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Update others address of an ID",
+    "permalink": "/docs/fetcch-x/sdk/update-others-address"
+  },
+  "next": {
+    "title": "Create Payment Requests",
+    "permalink": "/docs/fetcch-x/sdk/create-payment-requests"
+  }
+}

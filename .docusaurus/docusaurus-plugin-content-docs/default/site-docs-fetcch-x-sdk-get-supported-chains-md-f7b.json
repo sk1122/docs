@@ -1,0 +1,27 @@
+{
+  "unversionedId": "fetcch-x/sdk/get-supported-chains",
+  "id": "fetcch-x/sdk/get-supported-chains",
+  "title": "Get Supported Chains",
+  "description": "Get all supported chains",
+  "source": "@site/docs/fetcch-x/sdk/get-supported-chains.md",
+  "sourceDirName": "fetcch-x/sdk",
+  "slug": "/fetcch-x/sdk/get-supported-chains",
+  "permalink": "/docs/fetcch-x/sdk/get-supported-chains",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/get-supported-chains.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pay",
+    "permalink": "/docs/fetcch-x/sdk/pay"
+  },
+  "next": {
+    "title": "FetcchX ID API",
+    "permalink": "/docs/fetcch-x/api"
+  }
+}

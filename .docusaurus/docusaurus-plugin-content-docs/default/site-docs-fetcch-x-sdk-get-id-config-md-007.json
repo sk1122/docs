@@ -11,14 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/get-id-config.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 3,
+  "sidebarPosition": 6,
   "frontMatter": {
-    "sidebar_position": 3
+    "sidebar_position": 6
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create ID",
-    "permalink": "/docs/fetcch-x/sdk/create-id"
+    "title": "Update others address of an ID",
+    "permalink": "/docs/fetcch-x/sdk/update-others-address"
   },
   "next": {
     "title": "Update ID Config",

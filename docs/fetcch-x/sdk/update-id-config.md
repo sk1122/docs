@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 # Update ID Config
@@ -52,4 +52,15 @@ getIdConfig({
     .catch(error => {
         console.error(error)
     })
+```
+
+This function returns data of type `IDConfig`
+
+```js
+export interface IDConfig {
+    id?: string
+    wagpayId: string | ID
+    forcedSameChainPayment: boolean
+    requests: number | Request[]
+}
 ```

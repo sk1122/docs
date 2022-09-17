@@ -245,7 +245,7 @@
     "__comp": "__comp---theme-api-item-4-c-5-a29",
     "content": "content---api-update-payment-request-5-e-0-42c"
   },
-  "/docs-3ce": {
+  "/docs-1e8": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-613-c36"
@@ -312,6 +312,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-get-payment-requests-369-30c"
   },
+  "/docs/fetcch-x/sdk/get-supported-chains-07e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-get-supported-chainsf-7-b-5dc"
+  },
   "/docs/fetcch-x/sdk/installation-716": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-installation-999-beb"
@@ -320,9 +324,21 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-paye-40-d4f"
   },
+  "/docs/fetcch-x/sdk/update-default-address-f90": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-update-default-address-7-fe-a45"
+  },
   "/docs/fetcch-x/sdk/update-id-config-aba": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-fetcch-x-sdk-update-id-config-140-1d7"
+  },
+  "/docs/fetcch-x/sdk/update-others-address-086": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-update-others-addressebe-1e2"
+  },
+  "/docs/fetcch-x/sdk/update-payment-requests-150": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-fetcch-x-sdk-update-payment-requests-0-b-7-1e8"
   },
   "/docs/intro-aed": {
     "__comp": "__comp---theme-doc-item-178-a40",

@@ -119,8 +119,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Pay",
-                "permalink": "/docs/fetcch-x/sdk/pay"
+                "title": "Get Supported Chains",
+                "permalink": "/docs/fetcch-x/sdk/get-supported-chains"
               },
               "next": {
                 "title": "Open Source",
@@ -177,15 +177,15 @@
                 "permalink": "/docs/fetcch-x/sdk/get-id"
               },
               "next": {
-                "title": "Get ID Config",
-                "permalink": "/docs/fetcch-x/sdk/get-id-config"
+                "title": "Update default address of an ID",
+                "permalink": "/docs/fetcch-x/sdk/update-default-address"
               }
             },
             {
               "unversionedId": "fetcch-x/sdk/create-payment-requests",
               "id": "fetcch-x/sdk/create-payment-requests",
               "title": "Create Payment Requests",
-              "description": "",
+              "description": "This function returns data of type Request",
               "source": "@site/docs/fetcch-x/sdk/create-payment-requests.md",
               "sourceDirName": "fetcch-x/sdk",
               "slug": "/fetcch-x/sdk/create-payment-requests",
@@ -194,9 +194,9 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/create-payment-requests.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 5,
+              "sidebarPosition": 9,
               "frontMatter": {
-                "sidebar_position": 5
+                "sidebar_position": 9
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -204,8 +204,8 @@
                 "permalink": "/docs/fetcch-x/sdk/get-payment-requests"
               },
               "next": {
-                "title": "Pay",
-                "permalink": "/docs/fetcch-x/sdk/pay"
+                "title": "Update Payment Requests",
+                "permalink": "/docs/fetcch-x/sdk/update-payment-requests"
               }
             },
             {
@@ -248,14 +248,14 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/get-id-config.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 3,
+              "sidebarPosition": 6,
               "frontMatter": {
-                "sidebar_position": 3
+                "sidebar_position": 6
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Create ID",
-                "permalink": "/docs/fetcch-x/sdk/create-id"
+                "title": "Update others address of an ID",
+                "permalink": "/docs/fetcch-x/sdk/update-others-address"
               },
               "next": {
                 "title": "Update ID Config",
@@ -275,9 +275,9 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/get-payment-requests.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 4,
+              "sidebarPosition": 8,
               "frontMatter": {
-                "sidebar_position": 4
+                "sidebar_position": 8
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -290,10 +290,37 @@
               }
             },
             {
+              "unversionedId": "fetcch-x/sdk/get-supported-chains",
+              "id": "fetcch-x/sdk/get-supported-chains",
+              "title": "Get Supported Chains",
+              "description": "Get all supported chains",
+              "source": "@site/docs/fetcch-x/sdk/get-supported-chains.md",
+              "sourceDirName": "fetcch-x/sdk",
+              "slug": "/fetcch-x/sdk/get-supported-chains",
+              "permalink": "/docs/fetcch-x/sdk/get-supported-chains",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/get-supported-chains.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 12,
+              "frontMatter": {
+                "sidebar_position": 12
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Pay",
+                "permalink": "/docs/fetcch-x/sdk/pay"
+              },
+              "next": {
+                "title": "FetcchX ID API",
+                "permalink": "/docs/fetcch-x/api"
+              }
+            },
+            {
               "unversionedId": "fetcch-x/sdk/installation",
               "id": "fetcch-x/sdk/installation",
               "title": "Installation",
-              "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+              "description": "You can interact with Fetcch Bridge using @fetcch/id from your JS/TS project",
               "source": "@site/docs/fetcch-x/sdk/installation.md",
               "sourceDirName": "fetcch-x/sdk",
               "slug": "/fetcch-x/sdk/installation",
@@ -329,18 +356,45 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/pay.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 6,
+              "sidebarPosition": 11,
               "frontMatter": {
-                "sidebar_position": 6
+                "sidebar_position": 11
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Create Payment Requests",
-                "permalink": "/docs/fetcch-x/sdk/create-payment-requests"
+                "title": "Update Payment Requests",
+                "permalink": "/docs/fetcch-x/sdk/update-payment-requests"
               },
               "next": {
-                "title": "FetcchX ID API",
-                "permalink": "/docs/fetcch-x/api"
+                "title": "Get Supported Chains",
+                "permalink": "/docs/fetcch-x/sdk/get-supported-chains"
+              }
+            },
+            {
+              "unversionedId": "fetcch-x/sdk/update-default-address",
+              "id": "fetcch-x/sdk/update-default-address",
+              "title": "Update default address of an ID",
+              "description": "This function returns data of type ID",
+              "source": "@site/docs/fetcch-x/sdk/update-default-address.md",
+              "sourceDirName": "fetcch-x/sdk",
+              "slug": "/fetcch-x/sdk/update-default-address",
+              "permalink": "/docs/fetcch-x/sdk/update-default-address",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/update-default-address.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create ID",
+                "permalink": "/docs/fetcch-x/sdk/create-id"
+              },
+              "next": {
+                "title": "Update others address of an ID",
+                "permalink": "/docs/fetcch-x/sdk/update-others-address"
               }
             },
             {
@@ -356,9 +410,9 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/update-id-config.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 3,
+              "sidebarPosition": 7,
               "frontMatter": {
-                "sidebar_position": 3
+                "sidebar_position": 7
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -368,6 +422,60 @@
               "next": {
                 "title": "Get Payment Requests",
                 "permalink": "/docs/fetcch-x/sdk/get-payment-requests"
+              }
+            },
+            {
+              "unversionedId": "fetcch-x/sdk/update-others-address",
+              "id": "fetcch-x/sdk/update-others-address",
+              "title": "Update others address of an ID",
+              "description": "This function returns data of type ID",
+              "source": "@site/docs/fetcch-x/sdk/update-others-address.md",
+              "sourceDirName": "fetcch-x/sdk",
+              "slug": "/fetcch-x/sdk/update-others-address",
+              "permalink": "/docs/fetcch-x/sdk/update-others-address",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/update-others-address.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Update default address of an ID",
+                "permalink": "/docs/fetcch-x/sdk/update-default-address"
+              },
+              "next": {
+                "title": "Get ID Config",
+                "permalink": "/docs/fetcch-x/sdk/get-id-config"
+              }
+            },
+            {
+              "unversionedId": "fetcch-x/sdk/update-payment-requests",
+              "id": "fetcch-x/sdk/update-payment-requests",
+              "title": "Update Payment Requests",
+              "description": "Note - API will validate the transaction hash and the values associated with blockchain, if its similar, then only it payment request is marked resolved, otherwise update request is failed",
+              "source": "@site/docs/fetcch-x/sdk/update-payment-requests.md",
+              "sourceDirName": "fetcch-x/sdk",
+              "slug": "/fetcch-x/sdk/update-payment-requests",
+              "permalink": "/docs/fetcch-x/sdk/update-payment-requests",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/fetcch-x/sdk/update-payment-requests.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "sidebar_position": 10
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Payment Requests",
+                "permalink": "/docs/fetcch-x/sdk/create-payment-requests"
+              },
+              "next": {
+                "title": "Pay",
+                "permalink": "/docs/fetcch-x/sdk/pay"
               }
             },
             {
@@ -494,6 +602,14 @@
                       },
                       {
                         "type": "doc",
+                        "id": "fetcch-x/sdk/update-default-address"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "fetcch-x/sdk/update-others-address"
+                      },
+                      {
+                        "type": "doc",
                         "id": "fetcch-x/sdk/get-id-config"
                       },
                       {
@@ -510,7 +626,15 @@
                       },
                       {
                         "type": "doc",
+                        "id": "fetcch-x/sdk/update-payment-requests"
+                      },
+                      {
+                        "type": "doc",
                         "id": "fetcch-x/sdk/pay"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "fetcch-x/sdk/get-supported-chains"
                       }
                     ],
                     "link": {

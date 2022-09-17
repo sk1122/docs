@@ -17,8 +17,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Pay",
-    "permalink": "/docs/fetcch-x/sdk/pay"
+    "title": "Get Supported Chains",
+    "permalink": "/docs/fetcch-x/sdk/get-supported-chains"
   },
   "next": {
     "title": "Open Source",

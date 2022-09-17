@@ -89,6 +89,18 @@
               },
               {
                 "type": "link",
+                "label": "Update default address of an ID",
+                "href": "/docs/fetcch-x/sdk/update-default-address",
+                "docId": "fetcch-x/sdk/update-default-address"
+              },
+              {
+                "type": "link",
+                "label": "Update others address of an ID",
+                "href": "/docs/fetcch-x/sdk/update-others-address",
+                "docId": "fetcch-x/sdk/update-others-address"
+              },
+              {
+                "type": "link",
                 "label": "Get ID Config",
                 "href": "/docs/fetcch-x/sdk/get-id-config",
                 "docId": "fetcch-x/sdk/get-id-config"
@@ -113,9 +125,21 @@
               },
               {
                 "type": "link",
+                "label": "Update Payment Requests",
+                "href": "/docs/fetcch-x/sdk/update-payment-requests",
+                "docId": "fetcch-x/sdk/update-payment-requests"
+              },
+              {
+                "type": "link",
                 "label": "Pay",
                 "href": "/docs/fetcch-x/sdk/pay",
                 "docId": "fetcch-x/sdk/pay"
+              },
+              {
+                "type": "link",
+                "label": "Get Supported Chains",
+                "href": "/docs/fetcch-x/sdk/get-supported-chains",
+                "docId": "fetcch-x/sdk/get-supported-chains"
               }
             ],
             "href": "/docs/category/sdk-1"
@@ -186,7 +210,7 @@
     "fetcch-x/sdk/create-payment-requests": {
       "id": "fetcch-x/sdk/create-payment-requests",
       "title": "Create Payment Requests",
-      "description": "",
+      "description": "This function returns data of type Request",
       "sidebar": "tutorialSidebar"
     },
     "fetcch-x/sdk/get-id": {
@@ -207,10 +231,16 @@
       "description": "User's received payment requests",
       "sidebar": "tutorialSidebar"
     },
+    "fetcch-x/sdk/get-supported-chains": {
+      "id": "fetcch-x/sdk/get-supported-chains",
+      "title": "Get Supported Chains",
+      "description": "Get all supported chains",
+      "sidebar": "tutorialSidebar"
+    },
     "fetcch-x/sdk/installation": {
       "id": "fetcch-x/sdk/installation",
       "title": "Installation",
-      "description": "You can interact with Fetcch Bridge using @fetcch/sdk from your JS/TS project",
+      "description": "You can interact with Fetcch Bridge using @fetcch/id from your JS/TS project",
       "sidebar": "tutorialSidebar"
     },
     "fetcch-x/sdk/pay": {
@@ -219,10 +249,28 @@
       "description": "P2P payment",
       "sidebar": "tutorialSidebar"
     },
+    "fetcch-x/sdk/update-default-address": {
+      "id": "fetcch-x/sdk/update-default-address",
+      "title": "Update default address of an ID",
+      "description": "This function returns data of type ID",
+      "sidebar": "tutorialSidebar"
+    },
     "fetcch-x/sdk/update-id-config": {
       "id": "fetcch-x/sdk/update-id-config",
       "title": "Update ID Config",
       "description": "We've divided ID into 2 parts",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/update-others-address": {
+      "id": "fetcch-x/sdk/update-others-address",
+      "title": "Update others address of an ID",
+      "description": "This function returns data of type ID",
+      "sidebar": "tutorialSidebar"
+    },
+    "fetcch-x/sdk/update-payment-requests": {
+      "id": "fetcch-x/sdk/update-payment-requests",
+      "title": "Update Payment Requests",
+      "description": "Note - API will validate the transaction hash and the values associated with blockchain, if its similar, then only it payment request is marked resolved, otherwise update request is failed",
       "sidebar": "tutorialSidebar"
     },
     "intro": {

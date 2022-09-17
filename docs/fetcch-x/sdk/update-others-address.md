@@ -1,31 +1,26 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Create ID
-
-### Get ID Data from ID
+# Update others address of an ID
 
 ```js
 
-import { createId } from "@fetcch/id"
+import { updateOtherAddress } from "@fetcch/id"
 
-createId({
+updateDefaultAddress({
     apiKey: "PROVIDER_API_KEY",
     data: {
-        wagpayId: "satyam@wagpay",
-        default: {
-            address: "",
-            network: 1
-        },
         others: [
             {
-                address: "",
-                network: [1, 2, 3]
+                address: "", // required, also if just wanted to update network
+                network: [1, 2], // add new networks here
+                deleteNetwork: [3] // only if want to delete a previously added network
             }
-        ]
-        signedMsg: "signature"
-    },
+        ],
+        deleteAddress: [""], // list of other addresses that you want to delete from ID
+        signedMsg: "" // signed message from IDs default address
+    }
 })
     .then(result => {
         console.log(result)
